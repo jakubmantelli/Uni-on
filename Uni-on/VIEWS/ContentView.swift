@@ -4,12 +4,11 @@
 //  neverhaveiever
 //
 //  Created by Jakub Mantelli on 18/10/23.
-//
+//Main Never Have I Ever Screen
 import SwiftUI
 
 struct ContentView: View {
-    
-    
+
     //State is used so any changes to this variable (currentQuestionIndex) will automatically trigger updates in the view, so the UI stays in sync everytime.
     
     // set the current Array to 0
@@ -31,9 +30,9 @@ struct ContentView: View {
                 
                 
                 //Category Title or Navigation
-                Text(questions[currentQuestionIndex].category)
-                    .font(.title)
-                    .bold()
+              //  Text(questions[currentQuestionIndex].category)
+                //    .font(.title)
+                 //   .bold()
                 
                 
                 
@@ -52,7 +51,7 @@ struct ContentView: View {
                 RoundedRectangle(cornerRadius: 21)
                 
                 
-                    .foregroundColor(.black)
+                    .foregroundColor(Color(red: 0.569, green: 0.625, blue: 0.887))
                     .frame(width: 335, height: 335)
                     .overlay(Text(questions[currentQuestionIndex].text).multilineTextAlignment(.center).padding())
                     .font(.title3)
@@ -86,7 +85,8 @@ struct ContentView: View {
             
             
             //category as navigation title
-            // .navigationTitle(questions[currentQuestionIndex].category)
+            .navigationTitle(questions[currentQuestionIndex].category)
+            
             
             
             
