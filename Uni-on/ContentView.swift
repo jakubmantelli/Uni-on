@@ -20,7 +20,6 @@ struct ContentView: View {
     
     //number of max questions
     var maxQuestions = 5
-    var lol = 0
     
     var body: some View {
         
