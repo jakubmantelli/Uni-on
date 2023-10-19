@@ -11,6 +11,7 @@
 		374834242AE1300F00CFFA87 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374834232AE1300F00CFFA87 /* ContentView.swift */; };
 		374834262AE1301100CFFA87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 374834252AE1301100CFFA87 /* Assets.xcassets */; };
 		374834292AE1301100CFFA87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 374834282AE1301100CFFA87 /* Preview Assets.xcassets */; };
+		374834302AE1304F00CFFA87 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3748342F2AE1304F00CFFA87 /* Questions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		374834232AE1300F00CFFA87 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		374834252AE1301100CFFA87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		374834282AE1301100CFFA87 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3748342F2AE1304F00CFFA87 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		374834202AE1300F00CFFA87 /* Uni-on */ = {
 			isa = PBXGroup;
 			children = (
+				3748342F2AE1304F00CFFA87 /* Questions.swift */,
 				374834212AE1300F00CFFA87 /* Uni_onApp.swift */,
 				374834232AE1300F00CFFA87 /* ContentView.swift */,
 				374834252AE1301100CFFA87 /* Assets.xcassets */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				374834302AE1304F00CFFA87 /* Questions.swift in Sources */,
 				374834242AE1300F00CFFA87 /* ContentView.swift in Sources */,
 				374834222AE1300F00CFFA87 /* Uni_onApp.swift in Sources */,
 			);
