@@ -4,7 +4,9 @@
 //  neverhaveiever
 //
 //  Created by Jakub Mantelli on 18/10/23.
+
 //Main Never Have I Ever Screen
+
 import SwiftUI
 
 struct ContentView: View {
@@ -42,40 +44,48 @@ struct ContentView: View {
                     .foregroundColor(.blue)
                     .padding()
                 
-                
-                
-                
-                //create a rounder rectangle, to put text inside use .overlay and adjust with .padding and .frame and .multilinetextalignment
-                
-                //Question
-                RoundedRectangle(cornerRadius: 21)
-                
-                
-                    .foregroundColor(Color(red: 0.569, green: 0.625, blue: 0.887))
+                if questions[currentQuestionIndex].category  == "Special Owl Prompt" {
+                    RoundedRectangle(cornerRadius: 21)
+                    .foregroundColor(ColorPallete.primaryLight)
+                   
                     .frame(width: 335, height: 335)
                     .overlay(Text(questions[currentQuestionIndex].text).multilineTextAlignment(.center).padding())
                     .font(.title3)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                     .padding()
-                
-                
-                
+                } else {
+                    
+                    
+                    //create a rounder rectangle, to put text inside use .overlay and adjust with .padding and .frame and .multilinetextalignment
+                    
+                    //Question
+                    RoundedRectangle(cornerRadius: 21)
+                        .foregroundColor(ColorPallete.primary)
+                        .frame(width: 335, height: 335)
+                        .overlay(Text(questions[currentQuestionIndex].text).multilineTextAlignment(.center).padding())
+                        .font(.title3)
+                        .foregroundColor(.white)
+                        .padding()
+                    
+                }
                 Spacer(minLength: 10)
+  
+// if statements for Next Prompt and End game buttons.
                 
                 if currentQuestionIndex == maxQuestions - 1 {
-                    Button("End Game") {
-                        isAlertPresented.toggle()
-                    } .padding()
+                    Text("End Game")
+                     .padding()
                         .font(.body)
                         .foregroundColor(.white)
-                        .background(RoundedRectangle(cornerRadius: 15).foregroundColor(.red))
+                        .background(RoundedRectangle(cornerRadius: 15).foregroundColor(.black))
+                    
                 } else {
                     Button("Next Prompt") {
                         currentQuestionIndex = (currentQuestionIndex + 1) % questions.count
                     }.padding()
                         .font(.body)
                         .foregroundColor(.white)
-                        .background(RoundedRectangle(cornerRadius: 15).foregroundColor(.black))
+                        .background(RoundedRectangle(cornerRadius: 15).foregroundColor(Color.black))
                 }
                 
                 
@@ -86,6 +96,7 @@ struct ContentView: View {
             
             //category as navigation title
             .navigationTitle(questions[currentQuestionIndex].category)
+
             
             
             
@@ -109,17 +120,13 @@ struct ContentView: View {
             .alert(isPresented: $isAlertPresented) {
                 Alert(
                     title: Text("Confirm Quit"),
-                    message: Text("Are you sure you want to quit?"),
-                    primaryButton: .destructive(Text("Quit")) {
+                    message: Text("Go back to homepage?"),
+                    primaryButton: .destructive(Text("Homepage")) {
                         // quit action here
                         exit(0)
                     },
                     secondaryButton: .cancel()
                 )
-                
-                
-                
-                
             }
             
             

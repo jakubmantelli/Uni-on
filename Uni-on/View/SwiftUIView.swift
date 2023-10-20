@@ -11,8 +11,10 @@ struct SwiftUIView: View {
     var body: some View {
         NavigationView {
             
-            
+            ColorPallete.primaryLight
+                .overlay(
             VStack{
+            
                     
                 
                 Image("onb_placeholder")
@@ -36,7 +38,7 @@ struct SwiftUIView: View {
             
                 
                 
-                NavigationLink(destination: ContentView()) {
+                NavigationLink(destination: CategorySelectionView()) {
                     
                     Text("Start playing")
                         .frame(width: 150, height: 50)
@@ -48,7 +50,7 @@ struct SwiftUIView: View {
                       
                 }
                 
-            }
+            }) .ignoresSafeArea()
                 
             .preferredColorScheme(.light) //force light mode
               
