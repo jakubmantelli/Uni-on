@@ -15,7 +15,7 @@ struct SwiftUIView: View {
             VStack{
                     
                 
-                Image("onb_nhie")
+                Image("onb_placeholder")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 350, height: 350)
