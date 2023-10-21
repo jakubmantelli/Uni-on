@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SwiftUIView: View {
+struct NhieOnboardingView: View {
     var body: some View {
         NavigationView {
             
@@ -48,19 +48,21 @@ struct SwiftUIView: View {
                     
                     
                       
-                }
+                } 
                 
             }) .ignoresSafeArea()
+            
+            
                 
             .preferredColorScheme(.light) //force light mode
               
 
         
       
-        }
+        } 
     }
     
 }
 #Preview {
-    SwiftUIView()
+    NhieOnboardingView()
 }

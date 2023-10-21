@@ -57,7 +57,7 @@ struct CategorySelectionView: View {
                 VStack{
                     
                     
-                    NavigationLink(destination: ContentView()) {
+                    NavigationLink(destination: NhieView()) {
                         
                         Text("Shuffle it up!")
                             .frame(width: 150, height: 50)
@@ -68,7 +68,7 @@ struct CategorySelectionView: View {
                         
                     }
                     
-                    NavigationLink(destination: ContentView()) {
+                    NavigationLink(destination: NhieView()) {
                         
                         Text("Start playing")
                             .frame(width: 150, height: 50)
@@ -79,16 +79,16 @@ struct CategorySelectionView: View {
                         
                         
                         
-                    }
+                    } 
                 }
                 
                 
                 
                 
             }
-        }
+        } .navigationBarBackButtonHidden(true)
     }
-}
+} 
 //crazy struct for making more categories selectable
 
 

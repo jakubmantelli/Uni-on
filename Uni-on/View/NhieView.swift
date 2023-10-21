@@ -9,7 +9,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct NhieView: View {
 
     //State is used so any changes to this variable (currentQuestionIndex) will automatically trigger updates in the view, so the UI stays in sync everytime.
     
@@ -32,9 +32,9 @@ struct ContentView: View {
                 
                 
                 //Category Title or Navigation
-              //  Text(questions[currentQuestionIndex].category)
+                //  Text(questions[currentQuestionIndex].category)
                 //    .font(.title)
-                 //   .bold()
+                //   .bold()
                 
                 
                 
@@ -46,13 +46,13 @@ struct ContentView: View {
                 
                 if questions[currentQuestionIndex].category  == "Special Owl Prompt" {
                     RoundedRectangle(cornerRadius: 21)
-                    .foregroundColor(ColorPallete.primaryLight)
-                   
-                    .frame(width: 335, height: 335)
-                    .overlay(Text(questions[currentQuestionIndex].text).multilineTextAlignment(.center).padding())
-                    .font(.title3)
-                    .foregroundColor(.black)
-                    .padding()
+                        .foregroundColor(ColorPallete.primaryLight)
+                    
+                        .frame(width: 335, height: 335)
+                        .overlay(Text(questions[currentQuestionIndex].text).multilineTextAlignment(.center).padding())
+                        .font(.title3)
+                        .foregroundColor(.black)
+                        .padding()
                 } else {
                     
                     
@@ -69,12 +69,13 @@ struct ContentView: View {
                     
                 }
                 Spacer(minLength: 10)
-  
-// if statements for Next Prompt and End game buttons.
+                
+                // if statements for Next Prompt and End game buttons.
                 
                 if currentQuestionIndex == maxQuestions - 1 {
-                    Text("End Game")
-                     .padding()
+                    
+                    Text("End Game") 
+                        .padding()
                         .font(.body)
                         .foregroundColor(.white)
                         .background(RoundedRectangle(cornerRadius: 15).foregroundColor(.black))
@@ -120,18 +121,18 @@ struct ContentView: View {
             .alert(isPresented: $isAlertPresented) {
                 Alert(
                     title: Text("Confirm Quit"),
-                    message: Text("Go back to homepage?"),
-                    primaryButton: .destructive(Text("Homepage")) {
+                    message: Text("Are you sure you want to quit?"),
+                    primaryButton: .destructive(Text("Quit")) {
                         // quit action here
                         exit(0)
                     },
                     secondaryButton: .cancel()
                 )
             }
-            
+            .navigationBarBackButtonHidden(true)
             
             Spacer(minLength: 200) //everything goes to the top
-        }
+        } .navigationBarBackButtonHidden(true)
         
     }
     
@@ -140,7 +141,7 @@ struct ContentView: View {
 
 
 #Preview {
-    ContentView()
+    NhieView()
 }
 
 
