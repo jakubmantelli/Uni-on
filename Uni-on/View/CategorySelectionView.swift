@@ -19,9 +19,16 @@ struct CategorySelectionView: View {
         NavigationView {
             
             
+                
+        
+            
             VStack {
-                Text("Select 2 or more categories")
+                Text("Select 2 or more categories,")
+                    .font(.title2)
+                    
                 Text("or shuffle it up for mixed categories!")
+                    .font(.title2)
+                    .multilineTextAlignment(.center )
                 
                 List {
                     
@@ -38,14 +45,20 @@ struct CategorySelectionView: View {
                 }   .listStyle(PlainListStyle())
                 
                 
-                .navigationBarItems(trailing:
-                                        Button("Done", action: {
+                                        Button("Play!", action: {
                     if selectedCategories.count < 2 {
                         showErrorMessage = true // Show error message
                     } else {
                         isNavigationActive = true
                     }
-                }))
+                                        }) 
+                                       
+                                        .bold()
+                                        .foregroundColor(ColorPallete.primaryDark)
+                                        .buttonStyle(.bordered)
+                                    
+                    Spacer(minLength: 100)
+                
                 .background(         // Inside CategorySelectionView
                     NavigationLink("", destination: NhieView(selectedCategories: selectedCategories), isActive: $isNavigationActive))
                 
