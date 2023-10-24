@@ -10,7 +10,7 @@ import SwiftUI
 struct ResultLoading: View {
     @State private var isActive:Bool = false
     @State private var navigateToNext = false
-
+    
     var body: some View {
         
         NavigationView{
@@ -44,10 +44,10 @@ struct ResultLoading: View {
                 NavigationLink(destination: OnboardingContent(), isActive: $navigateToNext, label: {
                     EmptyView() //needs to be connected to survey result page ⛔️, would be nice to make it dissolve, not slide in
                 }).onAppear{
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                         self.navigateToNext = true
-                }
-
+                    }
+                    
                     
                 }
                 
@@ -56,9 +56,9 @@ struct ResultLoading: View {
             
             
         }
- 
         
-    } 
+        
+    }
     
 }
 
