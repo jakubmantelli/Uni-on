@@ -8,7 +8,6 @@
 
 import SwiftUI
 
-
 struct EntryAnimation: View {
     @State private var isActive: Bool = false
     @State private var navigateToNextView = false
@@ -52,10 +51,7 @@ struct EntryAnimation: View {
                 }
             }
             
-        } 
-        
-        
-        
+        }
         
     }
 }
