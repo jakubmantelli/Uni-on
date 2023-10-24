@@ -63,6 +63,6 @@ struct PersonaView: View {
     PersonaView(Persona:
                         Persona(description1: "You are a ...",
                                 description2: "Wise Night Owl 🦉",
-                                imageName: "Wise Night Owl")
+                                imageName: "Owl_Transparent")
     )
 }
