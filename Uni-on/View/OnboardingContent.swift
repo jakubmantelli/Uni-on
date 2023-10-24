@@ -59,7 +59,7 @@ struct OnboardingContent: View {
             }
             
             
-        }
+        }.navigationBarBackButtonHidden(true)
         
         .animation(.easeInOut, value: pageIndex)
         .tabViewStyle(.page(indexDisplayMode: .always))
