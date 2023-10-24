@@ -21,8 +21,6 @@ struct OnboardingContent: View {
             ColorPallete.primaryLight
                 .ignoresSafeArea()
             
-            
-            
             TabView(selection: $pageIndex) {
                 
                 

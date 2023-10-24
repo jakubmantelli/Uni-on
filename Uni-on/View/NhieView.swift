@@ -38,7 +38,7 @@ struct NhieView: View {
                     
                     Text("\(currentQuestionIndex + 1) of \(shuffledQuestions.count)")
                         .font(.subheadline)
-                        .foregroundColor(.blue)
+                        .foregroundColor(.black)
                         .padding()
                     
                     RoundedRectangle(cornerRadius: 21)
@@ -48,9 +48,10 @@ struct NhieView: View {
                             Text(shuffledQuestions[currentQuestionIndex])
                             
                                 .font(.title3)
+                                .foregroundColor(.white)
                                 .multilineTextAlignment(.center)
                                 .padding())
-                            Spacer ()
+                          
                 }
                 
                 
@@ -73,10 +74,10 @@ struct NhieView: View {
                     }
                 
             }
-            .padding()
-            
+            .padding(.bottom, 100)
+            .bold()
             .foregroundColor(.black)
-            .cornerRadius(10)
+       
             
             .navigationBarItems(trailing: NavigationLink("", destination: CategorySelectionView(), isActive: $showCategorySelection))
         }.navigationBarBackButtonHidden(true)
