@@ -10,28 +10,27 @@ import SwiftUI
 struct CategorySelectionView: View {
     @State private var selectedCategories: Set<String> = Set()
     @State private var showErrorMessage = false
-    
     @State private var isNavigationActive = false
-    @State private var selectall = true
-    // To control navigation
-    
+    @State private var shuffledQuestions: [Category] = []
+    @State private var isShuffling = false // Track whether shuffle is active
+
     var body: some View {
         NavigationView {
-            
-            
-                
-        
-            
             VStack {
+                Spacer(minLength: 30)
                 Text("Select 2 or more categories,")
                     .font(.title2)
-                    
+                    .bold()
+                  
+                
+
                 Text("or shuffle it up for mixed categories!")
                     .font(.title2)
-                    .multilineTextAlignment(.center )
+                    .multilineTextAlignment(.center)
+                    .bold()
+                    
                 
                 List {
-                    
                     ForEach(allCategories, id: \.name) { category in
                         HStack {
                             Text(category.name)
@@ -42,42 +41,49 @@ struct CategorySelectionView: View {
                                 }
                         }
                     }
-                }   .listStyle(PlainListStyle())
-                
-                
-                                        Button("Play!", action: {
-                    if selectedCategories.count < 2 {
-                        showErrorMessage = true // Show error message
-                    } else {
+                }
+                .listStyle(PlainListStyle())
+
+                NavigationLink("", destination: NhieView(selectedCategories: isShuffling ? shuffledCategories() : selectedCategories), isActive: $isNavigationActive)
+                     // Hidden link
+
+              
+
+                Button("Play!", action: {
+                    if isShuffling || selectedCategories.count >= 2 {
                         isNavigationActive = true
+                    } else {
+                        showErrorMessage = true // Show error message
                     }
-                                        }) 
-                                       
-                                        .bold()
-                                        .foregroundColor(ColorPallete.primaryDark)
-                                        .buttonStyle(.bordered)
-                                    
-                    Spacer(minLength: 100)
+                })
+                .bold()
+                .foregroundColor(ColorPallete.primaryDark)
+                .buttonStyle(.bordered)
+                 
+                Spacer(minLength: 30)
                 
-                .background(         // Inside CategorySelectionView
-                    NavigationLink("", destination: NhieView(selectedCategories: selectedCategories), isActive: $isNavigationActive))
+                Button("Shuffle!", action: {
+                    shuffleCategories()
+                    isNavigationActive = true // Navigate to NhieView
+                })
                 
+                .foregroundColor(ColorPallete.primaryDark)
+              
+
+                Spacer(minLength: 20)
+
                 .alert(isPresented: $showErrorMessage) {
                     Alert(
                         title: Text("Selection Error"),
-                        message: Text("Please select at least two categories."),
+                        message: Text("Please select at least two categories or shuffle."),
                         dismissButton: .default(Text("OK"))
                     )
                 }
-                
-       
-
-
-                
-                
             }
-        } .navigationBarBackButtonHidden(true)
+        }
+        .navigationBarBackButtonHidden(true)
     }
+
     private func toggleCategorySelection(_ category: String) {
         if selectedCategories.contains(category) {
             selectedCategories.remove(category)
@@ -85,15 +91,23 @@ struct CategorySelectionView: View {
             selectedCategories.insert(category)
         }
     }
+
+    private func shuffleCategories() {
+        shuffledQuestions = allCategories.shuffled()
+        isShuffling = true
+    }
+
+    private func shuffledCategories() -> Set<String> {
+        return Set(shuffledQuestions.prefix(2).map { $0.name })
+    }
 }
 
-
-
-       
-
-        
-
-
-    #Preview {
+struct CategorySelectionView_Previews: PreviewProvider {
+    static var previews: some View {
         CategorySelectionView()
     }
+}
+
+    
+    
+
