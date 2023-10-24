@@ -1,123 +1,99 @@
-//
-//  CategorySelectionView.swift
-//  Uni-on
-//
-//  Created by Jakub Mantelli on 20/10/23.
-//
+    //
+    //  CategorySelectionView.swift
+    //  Uni-on
+    //
+    //  Created by Jakub Mantelli on 20/10/23.
+    //
 
 import SwiftUI
 
 struct CategorySelectionView: View {
-    @State private var selectedCategories: Set<String> = []
+    @State private var selectedCategories: Set<String> = Set()
+    @State private var showErrorMessage = false
     
-    let allCategories = [
-        "Hobbies & Interests",
-        "Movies & TV Shows",
-        "Sports & Fitness",
-        "Music & Concerts",
-        "Books & Literature",
-        "Food & Dining",
-        "Campus Events & Activities",
-        "Campus City & Country",
-        "Career & Education",
-        "Personal Experiences"
-        // Add more categories as needed
-    ]
-
+    @State private var isNavigationActive = false
+    @State private var selectall = true
+    // To control navigation
+    
     var body: some View {
-        
-       
         NavigationView {
             
-           
+            
+                
+        
+            
             VStack {
-                
-                
-                
-                Text("Select 2 or more categories")
+                Text("Select 2 or more categories,")
+                    .font(.title2)
+                    
                 Text("or shuffle it up for mixed categories!")
-                
+                    .font(.title2)
+                    .multilineTextAlignment(.center )
                 
                 List {
                     
-                    ForEach(allCategories, id: \.self) { category in
-                        MultipleSelectionRow(
-                            category: category,
-                            isSelected: self.selectedCategories.contains(category)
-                        ) {
-                            if self.selectedCategories.contains(category) {
-                                self.selectedCategories.remove(category)
-                            } else {
-                                self.selectedCategories.insert(category)
-                            }
+                    ForEach(allCategories, id: \.name) { category in
+                        HStack {
+                            Text(category.name)
+                            Spacer()
+                            Image(systemName: selectedCategories.contains(category.name) ? "checkmark.circle.fill" : "circle")
+                                .onTapGesture {
+                                    toggleCategorySelection(category.name)
+                                }
                         }
                     }
-                } .listStyle(PlainListStyle())
+                }   .listStyle(PlainListStyle())
                 
-                VStack{
-                    
-                    
-                    NavigationLink(destination: NhieView()) {
-                        
-                        Text("Shuffle it up!")
-                            .frame(width: 150, height: 50)
-                            .background(ColorPallete.secondaryLight)
-                            .foregroundColor(.black)
-                            .cornerRadius(8)
-                            .padding(40)
-                        
+                
+                                        Button("Play!", action: {
+                    if selectedCategories.count < 2 {
+                        showErrorMessage = true // Show error message
+                    } else {
+                        isNavigationActive = true
                     }
-                    
-                    NavigationLink(destination: NhieView()) {
-                        
-                        Text("Start playing")
-                            .frame(width: 150, height: 50)
-                            .background(ColorPallete.primaryDark)
-                            .foregroundColor(.white)
-                            .cornerRadius(8)
-                            .padding()
-                        
-                        
-                        
-                    } 
+                                        }) 
+                                       
+                                        .bold()
+                                        .foregroundColor(ColorPallete.primaryDark)
+                                        .buttonStyle(.bordered)
+                                    
+                    Spacer(minLength: 100)
+                
+                .background(         // Inside CategorySelectionView
+                    NavigationLink("", destination: NhieView(selectedCategories: selectedCategories), isActive: $isNavigationActive))
+                
+                .alert(isPresented: $showErrorMessage) {
+                    Alert(
+                        title: Text("Selection Error"),
+                        message: Text("Please select at least two categories."),
+                        dismissButton: .default(Text("OK"))
+                    )
                 }
                 
-                
+       
+
+
                 
                 
             }
         } .navigationBarBackButtonHidden(true)
     }
-} 
-//crazy struct for making more categories selectable
-
-
-struct MultipleSelectionRow: View {
-    var category: String
-    var isSelected: Bool
-    var action: () -> Void
-    
-    var body: some View {
-        Button(action: {
-            self.action()
-        }) {
-            HStack {
-                Text(category)
-                Spacer()
-                if isSelected {
-                    Image(systemName: "checkmark")
-                        .foregroundColor(.blue)
-                }
-            }
+    private func toggleCategorySelection(_ category: String) {
+        if selectedCategories.contains(category) {
+            selectedCategories.remove(category)
+        } else {
+            selectedCategories.insert(category)
         }
     }
 }
 
-   
-
-    
 
 
-#Preview {
-    CategorySelectionView()
-}
+       
+
+        
+
+
+    #Preview {
+        CategorySelectionView()
+    }
