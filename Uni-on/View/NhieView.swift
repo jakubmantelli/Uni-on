@@ -6,142 +6,121 @@
 //  Created by Jakub Mantelli on 18/10/23.
 
 //Main Never Have I Ever Screen
-
 import SwiftUI
 
 struct NhieView: View {
-
-    //State is used so any changes to this variable (currentQuestionIndex) will automatically trigger updates in the view, so the UI stays in sync everytime.
+    var selectedCategories: Set<String>
     
-    // set the current Array to 0
-    @State private var currentQuestionIndex = 0
-    //stating a var to initialize an alert
-    @State private var isAlertPresented = false
+    @State private var shuffledQuestions: [String] = []
+    @State private var currentQuestionIndex: Int = 0
+    @State private var isGameEnded = false
+    @State private var showCategorySelection = false
     
+    var maxQuestionsToShow = 7  // Maximum number of questions to display
     
-    //number of max questions
-    var maxQuestions = 5
+    var showEndGameButton: Bool {
+        return currentQuestionIndex == shuffledQuestions.count - 1
+    }
     
     var body: some View {
-        
-        NavigationStack {
+        NavigationView {
             
             VStack {
-                
-                Spacer(minLength: 100)
-                
-                
-                //Category Title or Navigation
-                //  Text(questions[currentQuestionIndex].category)
-                //    .font(.title)
-                //   .bold()
-                
-                
-                
-                //Keep track of the question number
-                Text("Question \(currentQuestionIndex + 1) of \(questions.count)")
-                    .font(.subheadline)
-                    .foregroundColor(.blue)
-                    .padding()
-                
-                if questions[currentQuestionIndex].category  == "Special Owl Prompt" {
-                    RoundedRectangle(cornerRadius: 21)
-                        .foregroundColor(ColorPallete.primaryLight)
-                    
-                        .frame(width: 335, height: 335)
-                        .overlay(Text(questions[currentQuestionIndex].text).multilineTextAlignment(.center).padding())
-                        .font(.title3)
-                        .foregroundColor(.black)
-                        .padding()
+                if shuffledQuestions.isEmpty {
+                    Text("No questions available.")
+                        .font(.title)
                 } else {
+                    Text(categoryForQuestion(shuffledQuestions[currentQuestionIndex]))
+                        .font(.title)
+                        .padding(.top)
                     
                     
-                    //create a rounder rectangle, to put text inside use .overlay and adjust with .padding and .frame and .multilinetextalignment
                     
-                    //Question
+                    Text("\(currentQuestionIndex + 1) of \(shuffledQuestions.count)")
+                        .font(.subheadline)
+                        .foregroundColor(.blue)
+                        .padding()
+                    
                     RoundedRectangle(cornerRadius: 21)
                         .foregroundColor(ColorPallete.primary)
                         .frame(width: 335, height: 335)
-                        .overlay(Text(questions[currentQuestionIndex].text).multilineTextAlignment(.center).padding())
-                        .font(.title3)
-                        .foregroundColor(.white)
-                        .padding()
-                    
-                }
-                Spacer(minLength: 10)
-                
-                // if statements for Next Prompt and End game buttons.
-                
-                if currentQuestionIndex == maxQuestions - 1 {
-                    
-                    Text("End Game") 
-                        .padding()
-                        .font(.body)
-                        .foregroundColor(.white)
-                        .background(RoundedRectangle(cornerRadius: 15).foregroundColor(.black))
-                    
-                } else {
-                    Button("Next Prompt") {
-                        currentQuestionIndex = (currentQuestionIndex + 1) % questions.count
-                    }.padding()
-                        .font(.body)
-                        .foregroundColor(.white)
-                        .background(RoundedRectangle(cornerRadius: 15).foregroundColor(Color.black))
+                        .overlay(
+                            Text(shuffledQuestions[currentQuestionIndex])
+                            
+                                .font(.title3)
+                                .multilineTextAlignment(.center)
+                                .padding())
+                            Spacer ()
                 }
                 
                 
-                
-            }
-            .preferredColorScheme(.light) //force light mode
-            
-            
-            //category as navigation title
-            .navigationTitle(questions[currentQuestionIndex].category)
-
-            
-            
-            
-            
-            //clickable quit button
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button("X") {
-                        // Show the alert when the button is pressed
-                        isAlertPresented.toggle()
+             
+                    if showEndGameButton {
                         
+            
+                        Button("End Game"){
+                            isGameEnded = true
+                            showCategorySelection = true
+                        }
+                    } else {
+                        Button("Next Prompt"){
+                        
+                            if currentQuestionIndex < shuffledQuestions.count - 1 {
+                                currentQuestionIndex += 1
+                            }
+                            
+                        }
                     }
-                    .padding()
-                    .font(.title2)
-                    .bold()
-                    .foregroundColor(.black)
-                }
+                
             }
+            .padding()
             
-            //function alert
-            .alert(isPresented: $isAlertPresented) {
-                Alert(
-                    title: Text("Confirm Quit"),
-                    message: Text("Are you sure you want to quit?"),
-                    primaryButton: .destructive(Text("Quit")) {
-                        // quit action here
-                        exit(0)
-                    },
-                    secondaryButton: .cancel()
-                )
-            }
-            .navigationBarBackButtonHidden(true)
+            .foregroundColor(.black)
+            .cornerRadius(10)
             
-            Spacer(minLength: 200) //everything goes to the top
-        } .navigationBarBackButtonHidden(true)
+            .navigationBarItems(trailing: NavigationLink("", destination: CategorySelectionView(), isActive: $showCategorySelection))
+        }.navigationBarBackButtonHidden(true)
         
+            .onAppear {
+                shuffledQuestions = shuffleAndSelectQuestions()
+            }
     }
     
+    
+    
+    //FUNCTIONS BELOW
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // Function to shuffle and select random questions
+    func shuffleAndSelectQuestions() -> [String] {
+        let filteredCategories = allCategories.filter { selectedCategories.contains($0.name) }
+        var allQuestions = filteredCategories.flatMap { $0.question }
+        allQuestions.shuffle()
+        return Array(allQuestions.prefix(maxQuestionsToShow))
+    }
+    
+    // Function to find the category for a given question
+    func categoryForQuestion(_ question: String) -> String {
+        for category in allCategories {
+            if category.question.contains(question) {
+                return category.name
+            }
+        }
+        return ""
+    }
 }
 
-
-
-#Preview {
-    NhieView()
+struct NhieView_Previews: PreviewProvider {
+    static var previews: some View {
+        NhieView(selectedCategories: Set(["Hobbies & Interests", "Movies & TV Shows"]))
+    }
 }
 
 
