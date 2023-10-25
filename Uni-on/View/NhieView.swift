@@ -71,7 +71,7 @@ struct NhieView: View {
                             }
                             
                         }
-                    }
+                    } 
                 
             }
             .padding(.bottom, 100)
