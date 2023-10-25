@@ -10,7 +10,10 @@ import Foundation
 
 struct PersonaView: View {
     
+    
+    
     var Persona: Persona
+    
     
     var body: some View {
         
@@ -23,6 +26,7 @@ struct PersonaView: View {
                         .bold()
                         .font(.largeTitle)
                         .multilineTextAlignment(.center)
+                    
                     
                     Image(Persona.imageName)
                         .resizable()
@@ -77,11 +81,10 @@ struct PersonaView: View {
     }
 
 
-
 #Preview {
     PersonaView(Persona:
                         Persona(description1: "You are a ...",
                                 description2: "Wise Night Owl 🦉",
-                                imageName: "Owl_Transparent")
+                                imageName: "OwlFull")
     )
 }
