@@ -109,13 +109,13 @@ let allCategories = [
                                                             "Never have I ever eaten sea food"
     ]),
     Category(name: "Book & Literature", question: [
-                                                            "- Never have I ever read a book in a single sitting because I couldn't put it down.",
-                                                            "- Never have I ever joined a book club just to meet new people and have interesting discussions.",
-                                                            "- Never have I ever created funny book-themed memes or jokes with friends.",
-                                                            "- Never have I ever read a manga",
-                                                            "- Never have I ever bought a book that i never read",
-                                                            "- Never have I ever read a book on a train",
-                                                            "- Never have I ever read a page of the Bible"
+                                                            "Never have I ever read a book in a single sitting because I couldn't put it down.",
+                                                            "Never have I ever joined a book club just to meet new people and have interesting discussions.",
+                                                            "Never have I ever created funny book-themed memes or jokes with friends.",
+                                                            "Never have I ever read a manga",
+                                                            "Never have I ever bought a book that i never read",
+                                                            "Never have I ever read a book on a train",
+                                                            "Never have I ever read a page of the Bible"
                                                         
     
     ]),

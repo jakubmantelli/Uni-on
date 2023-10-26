@@ -16,8 +16,17 @@ struct CategorySelectionView: View {
 
     var body: some View {
         NavigationView {
+            
             VStack {
-                Spacer(minLength: 30)
+                
+                Spacer(minLength: 10)
+                Text("Never have i ever")
+                    .font(.subheadline)
+                    .bold()
+                    .foregroundColor(ColorPallete.primaryDark)
+                
+                
+                Spacer(minLength: 10)
                 Text("Select 2 or more categories,")
                     .font(.title2)
                     .bold()
@@ -30,19 +39,30 @@ struct CategorySelectionView: View {
                     .bold()
                     
                 
-                List {
-                    ForEach(allCategories, id: \.name) { category in
-                        HStack {
-                            Text(category.name)
-                            Spacer()
-                            Image(systemName: selectedCategories.contains(category.name) ? "checkmark.circle.fill" : "circle")
-                                .onTapGesture {
-                                    toggleCategorySelection(category.name)
-                                }
+                VStack {
+                    List {
+                        ForEach(allCategories, id: \.name) { category in
+                            HStack {
+                                Text(category.name)
+                                    .padding(10)
+                                
+                                
+                                
+                                Spacer()
+                                Image(systemName: selectedCategories.contains(category.name) ? "checkmark.square.fill" : "square")
+                                    .foregroundColor(ColorPallete.primaryDark)
+                                    .bold()
+                                    .onTapGesture {
+                                        toggleCategorySelection(category.name)
+                                    }
+                                   
+                            }
                         }
                     }
-                }
-                .listStyle(PlainListStyle())
+                  
+                } .padding(-5)
+                
+            
 
                 NavigationLink("", destination: NhieView(selectedCategories: isShuffling ? shuffledCategories() : selectedCategories), isActive: $isNavigationActive)
                      // Hidden link
@@ -57,7 +77,7 @@ struct CategorySelectionView: View {
                     }
                 })
                 .bold()
-                .foregroundColor(ColorPallete.primaryDark)
+              
                 .buttonStyle(.bordered)
                  
                 Spacer(minLength: 30)
@@ -79,8 +99,12 @@ struct CategorySelectionView: View {
                         dismissButton: .default(Text("OK"))
                     )
                 }
-            }
+                
+            } .scrollContentBackground(.hidden)
+                .background(ColorPallete.primaryLight)
+               
         }
+        
         .navigationBarBackButtonHidden(true)
     }
 
