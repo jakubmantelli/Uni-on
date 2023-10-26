@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		349C20EE2AEA723A00060C84 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 349C20ED2AEA723A00060C84 /* .gitignore */; };
 		372501E32AEA59CF00A143DA /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372501E22AEA59CF00A143DA /* ActivityView.swift */; };
 		372501E52AEA59E200A143DA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372501E42AEA59E200A143DA /* ProfileView.swift */; };
 		372501E72AEA59F500A143DA /* HomeNoQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372501E62AEA59F500A143DA /* HomeNoQuizView.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		349C20ED2AEA723A00060C84 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		372501E22AEA59CF00A143DA /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		372501E42AEA59E200A143DA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		372501E62AEA59F500A143DA /* HomeNoQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNoQuizView.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		374834202AE1300F00CFFA87 /* Uni-on */ = {
 			isa = PBXGroup;
 			children = (
+				349C20ED2AEA723A00060C84 /* .gitignore */,
 				374834212AE1300F00CFFA87 /* Uni_onApp.swift */,
 				3781731C2AE1D10D008C0815 /* Model */,
 				3781731B2AE1D106008C0815 /* View */,
@@ -189,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				374834292AE1301100CFFA87 /* Preview Assets.xcassets in Resources */,
+				349C20EE2AEA723A00060C84 /* .gitignore in Resources */,
 				374834262AE1301100CFFA87 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
