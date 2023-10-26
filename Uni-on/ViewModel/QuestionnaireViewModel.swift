@@ -10,29 +10,23 @@ import Combine
 import SwiftUI
 
 struct RadioButton: View {
-    @Binding var checked: Bool    //the variable that determines if its checked
-    
+    @Binding var checked: Bool
+
     var body: some View {
-        Group{
+        ZStack {
+            Image(systemName: "circle")
+                .foregroundColor(.gray)
+                .onTapGesture {
+                    self.checked.toggle()
+                }
             if checked {
-                ZStack{
-                    Circle()
-                        .fill(Color.blue)
-                        .frame(width: 20, height: 20)
-                    Circle()
-                        .fill(Color.white)
-                        .frame(width: 8, height: 8)
-                }.onTapGesture {self.checked = false}
-            } else {
-                Circle()
-                    .fill(Color.white)
-                    .frame(width: 20, height: 20)
-                    .overlay(Circle().stroke(Color.gray, lineWidth: 1))
-                    .onTapGesture {self.checked = true}
+                Image(systemName: "checkmark.circle")
+                    .foregroundColor(ColorPallete.primary)
             }
         }
     }
 }
+
 
 
 class QuestionnaireViewModel: ObservableObject {
@@ -67,6 +61,12 @@ class QuestionnaireViewModel: ObservableObject {
     func calculateUserScore() -> Int {
         return userAnswers.reduce(0, +)
     }
+    
+    func goToZero() {
+        currentQuestionIndex = 0
+        
+    }
+
 }
 
 

@@ -9,11 +9,9 @@ import SwiftUI
 
 struct OnboardingContent: View {
     
-    
     @State private var pageIndex = 0
     private let pages: [Page] = Page.samplePages
     private let dotAppearance = UIControl.appearance()
-    
     
     var body: some View {
         
@@ -22,8 +20,6 @@ struct OnboardingContent: View {
                 .ignoresSafeArea()
             
             TabView(selection: $pageIndex) {
-                
-                
                 
                 ForEach(pages) { page in
                     VStack {
