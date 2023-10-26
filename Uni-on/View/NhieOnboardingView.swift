@@ -59,7 +59,7 @@ struct NhieOnboardingView: View {
 
         
       
-        } 
+        }  .navigationBarBackButtonHidden(true)
     }
     
 }

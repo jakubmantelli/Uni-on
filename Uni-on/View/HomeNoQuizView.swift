@@ -7,83 +7,124 @@
 
 import SwiftUI
 
-struct ContentView: View {
+
+struct HomeNoQuizView: View {
     var body: some View {
         NavigationView{
             ZStack{
-                Color(red: 0.92, green: 0.94, blue: 1).ignoresSafeArea()
+                Color(ColorPallete.primaryLight).ignoresSafeArea()
                 VStack {
-                
-                RoundedRectangle(cornerRadius: 10.0)
-                    .foregroundColor(Color(red: 0.569, green: 0.625, blue: 0.887))
-                    .frame(width: UIScreen.main.bounds.width, height: 200)
-                    .overlay(
-                        VStack(alignment: .leading) {
-                            Text("What is your spirit animal?🦄")
-                                .font(.title)
-                                .bold()
-                                .padding(.top)
-                                .foregroundColor(.white)
-                            
-                            Text("Discover your communication style\nthrough a one minute quiz")
-                                .font(.subheadline)
-                                .multilineTextAlignment(.center)
-                                .foregroundColor(.white)
-                            
-                            Button(action: {
-                                // Azioni da eseguire quando il pulsante viene premuto
-                                Image(systemName: "hand.point.up.left.fill")
-                            }) {
-                                Text("Take a quiz")
-                                    .font(.headline)
-                                    .foregroundColor(.white)
-                                    .padding()
-                                    .frame(width: 200, height: 80)
-                                    .background(Color.black)
-                                    .cornerRadius(40)
-                            }
-                        }
-                    )
-                    .padding(.bottom, 30)
-                    .navigationTitle("Uni-on")
-                
-                Circle()
-                    .frame(width: 500, height: 300)
-                    .foregroundColor(.white)
-                    .overlay(
-                        Image("unicologo")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .clipShape(Circle())
-                            .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-                            .padding()
-                    )
-                    .padding(.bottom, 30)
-                
-                ZStack {
-                    Button(action: {
-                        // Azioni da eseguire quando il pulsante viene premuto
-                    }) {
-                        Text("Start Game")
-                            .foregroundColor(.white)
-                            .frame(width: 200, height: 80)
-                            .background(Color.black)
-                            .cornerRadius(10)
+                    Text("Uni-on!")
+                        .offset(y:5)
+                        .font(.title2)
+                        .foregroundColor(.gray)
+                    RoundedRectangle(cornerRadius: 10.0)
+                        .foregroundColor(Color(ColorPallete.primary))
+                        .frame(width:361, height: 154)
                         
-                    }
+                        .overlay(
+                            HStack {
+                                VStack {
+                                    
+                                    Text("What is your spirit animal?🦄")
+                                        .font(.title3)
+                                    
+                                        .padding(.top)
+                                        .foregroundColor(.white)
+                                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                                        .offset(x:20)
+                                    
+                                    Text("Discover your communication style!")
+                                        .font(.body)
+                                        .foregroundColor(.white)
+                                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                                        .offset(x:10)
+                                        .padding(.bottom, 10)
+                                    
+                                    
+                                    
+                                    
+                                    NavigationLink(destination: EmptyView()) {
+                                        Text("Take a Quiz")
+                                        // Image(systemName: "hand.point.up.left.fill")
+                                        
+                                            .font(.subheadline)
+                                            .foregroundColor(.white)
+                                            .padding(8)
+                                        
+                                            .background(Color.black)
+                                            .cornerRadius(40)
+                                            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                                            .offset(x:10)
+                                            .padding(.bottom, 20)
+                                    }
+                                    
+                                }
+                            }) .padding(.bottom, 80)
+                            
+                            
+                            
+                        
+                    
+                    
+                    
+                    
+                    
+                    
+        //LOGO 
+                    VStack {
+                        
+                        NavigationLink(destination: NhieOnboardingView()) {
+                            Circle()
+                                .frame(width: 233, height: 233)
+                                .foregroundColor(.white)
+                            
+                                .overlay(
+                                    Image("onboardingLogo")
+                                        .resizable()
+                                    
+                                        .clipShape(Ellipse())
+                                        .padding())
+                                .padding(90)
+                                .offset(y:-50)
+
+                        
+             
+                            
+                        } 
+                        Text("Tap to begin...")
+                            .foregroundColor(ColorPallete.primary)
+                            .padding()
+                            .offset(y:-150)
+                    
+                        
+                        
+                        
+                        }
+                  
                 }
+                
+                .preferredColorScheme(.light) //force light mode
+                        
+                        
+                        
+                    
                     
                 }
-            }
+
+                
+                
+        } .navigationBarBackButtonHidden(true)
         }
         
     }
-}
+
       
 
 
+
 #Preview {
-    ContentView()
+    HomeNoQuizView()
 }
 
 

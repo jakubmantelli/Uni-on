@@ -7,284 +7,115 @@
 
 import SwiftUI
 
-struct DetailView: View {
+struct HomeView: View {
     var body: some View {
         NavigationView{
             ZStack {
-                Color(red: 0.92, green: 0.94, blue: 1).ignoresSafeArea()
-
+                Color(ColorPallete.primaryLight).ignoresSafeArea()
+                
                 VStack {
-                    RoundedRectangle(cornerRadius: 10.0)
-                        .foregroundColor(Color(red: 0.569, green: 0.625, blue: 0.887))
-                        .frame(width: UIScreen.main.bounds.width, height: 200)
+                    Text("Uni-on!")
+                        .offset(y:5)
+                        .font(.title2)
+                        .foregroundColor(.gray)
+                    RoundedRectangle(cornerRadius: 10)
+                        .foregroundColor(ColorPallete.primary)
+                        .frame(width:361, height: 154)
                         .overlay(
-                            HStack {
-                                VStack(alignment: .leading) {
-                                    Text("Welcome👋🏻")
-                                        .font(.title)
-                                        .bold()
-                                        .padding(.top)
-                                        .foregroundColor(.white)
-
-                                    Text("Wise Night Owl")
-                                        .font(.subheadline)
-                                        .bold()
-                                        .multilineTextAlignment(.center)
-                                        .foregroundColor(.white)
-                                        Spacer()
-                                    
-                                    
-                                    NavigationLink(destination: ProfileView()) {
-                                        Text("View Profile")
-                                            .foregroundStyle(.white)
+                            NavigationLink(destination: ProfileView()) {
+                                HStack {
+                                    VStack {
+                                        
+                                            Text("Welcome👋🏻")
+                                                .font(.title)
+                                                .bold()
+                                                .foregroundColor(.white)
+                                                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                                                .offset(y:10)
+                                            
+                                            
+                                            Text("Compassionate Dolphin")
+                                                .font(.title)
+                                                .bold()
+                                                .foregroundColor(.white)
+                                                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                                                .padding(.bottom, 50)
+                                            
+                                                .offset(y:10)
+                                                .lineLimit(2)
+                                            
+                                            Text("View Profile")
+                                                .foregroundColor(.white)
+                                        
+                                                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                                     
+                                                .offset(y: -30)
+                                            
+                                            
+                                        }
+                                        
+                                        .multilineTextAlignment(.leading)
+                                        .padding(.leading, 20)
+                                        
+                                        Image("Owl_Transparent")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .clipShape(Circle())
+                                            .frame(width: 120)
+                                        
+                                        
+                                           
+                                        
                                     }
                                     
                                     
-                                }
-                                .padding(.leading, 20)
-
-                                Image("Owl_Transparent")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .clipShape(Circle())
-                                    .shadow(radius: 100)
-                                    .padding(.bottom, 20)
-                                    .frame(width: 200, height: 200)
-                              
-                               
+                                })
                                 
                                 
                                 
                                 
                                 
-                                
-                            }
-                        )
-                        .padding(.bottom, 30)
-                        .navigationTitle("Uni-On")
-
-                    Circle()
-                        .frame(width: 500, height: 300)
-                        .foregroundColor(.white)
-                        .overlay(
-                            Image("unicologo")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .clipShape(Circle())
-                                .shadow(radius: 10)
-                                .padding()
-                        )
-                        .padding(.bottom, 30)
-
-                    ZStack {
+                            
+                        
+                        .padding(.bottom, 120)
+                    
+                    VStack {
+                        
                         NavigationLink(destination: NhieOnboardingView()) {
-                            Text("Start Game")
+                            Circle()
+                                .frame(width: 233, height: 233)
                                 .foregroundColor(.white)
-                                .frame(width: 200, height: 80)
-                                .background(Color.black)
-                                .cornerRadius(10)
-                        }
+                            
+                                .overlay(
+                                    Image("onboardingLogo")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .clipShape(Ellipse())
+                                        .padding())
+                                .offset(y:-50)
+                    
+                            
+                            
+                        } .padding(.bottom, 150)
+                        
+                        Text("Tap to begin...")
+                            .font(.subheadline)
+                            .foregroundColor(ColorPallete.primary)
+                            .offset(y: -200)
                     }
-                }
+                } .preferredColorScheme(.light) //force light mode
+                
             }
-            
-            /* ZStack{
-             
-             VStack {
-             RoundedRectangle(cornerRadius: 10.0)
-             .foregroundColor(Color(red: 0.569, green: 0.625, blue: 0.887))
-             .frame(width: UIScreen.main.bounds.width, height: 200)
-             .overlay(
-             
-             HStack{
-             
-             VStack(alignment: .leading) {
-             Text("Welcome👋🏻")
-             .font(.title)
-             .bold()
-             .padding(.top)
-             .foregroundColor(.white)
-             Text("Wise Night Owl")
-             .font(.subheadline)
-             .bold()
-             .multilineTextAlignment(.center)
-             .foregroundColor(.white)
-             Spacer()
-             }
-             Image("Owl_Transparent")
-             .resizable()
-             .aspectRatio(contentMode: .fit)
-             .clipShape(Circle())
-             .shadow(radius: 100)
-             .padding(.bottom, 20)
-             .frame(width: 100)
-             Button("View profile") {
-             
-             }
-             .foregroundColor(.white)
-             
-             
-             }
-             )*/
-            
-            /*RoundedRectangle(cornerRadius: 10.0)
-             .foregroundColor(Color(red: 0.569, green: 0.625, blue: 0.887))
-             .frame(width: UIScreen.main.bounds.width, height: 200)
-             .overlay(
-             HStack{
-             VStack(alignment: .leading) {
-             Text("Welcome👋🏻")
-             .font(.title)
-             .bold()
-             .padding(.top)
-             .foregroundColor(.white)
-             
-             Text("Wise Night Owl")
-             .font(.subheadline)
-             .bold()
-             .multilineTextAlignment(.center)
-             .foregroundColor(.white)
-             .padding(.bottom, 80)
-             
-             
-             
-             
-             
-             
-             
-             Image("Owl_Transparent")
-             .resizable()
-             .aspectRatio(contentMode: .fit)
-             .clipShape(Circle())
-             .shadow(radius: 100)
-             .padding(.bottom, 20)
-             .frame(width: 200, height:200)
-             )*/
+
             
         }        .navigationBarBackButtonHidden(true)
         
-        
-        /*.padding(.bottom, 30)
-         .navigationTitle("Uni-On")
-         
-         Circle()
-         .frame(width: 500, height: 300)
-         .foregroundColor(.white)
-         .overlay(
-         Image("unicologo")
-         .resizable()
-         .aspectRatio(contentMode: .fit)
-         .clipShape(Circle())
-         .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-         .padding()
-         )
-         .padding(.bottom, 30)
-         
-         ZStack {
-         Button(action: {
-         // Azioni da eseguire quando il pulsante viene premuto
-         }) {
-         Text("Start Game")
-         .foregroundColor(.white)
-         .frame(width: 200, height: 80)
-         .background(Color.black)
-         .cornerRadius(10)
-         
-         }
-         }
-         }
-         
-         }
-         
-         
-         }
-         
-         }*/
+    
     }
 }
 
 #Preview {
-    DetailView()
+    HomeView()
 }
 
 
-
-
-
-
-
-/*VStack {
- RoundedRectangle(cornerRadius: 10.0)
- .foregroundColor(Color(red: 0.569, green: 0.625, blue: 0.887))
- .frame(width: UIScreen.main.bounds.width, height: 200)
- .overlay(
- 
- HStack{
- 
- VStack(alignment: .leading) {
- Text("Welcome👋🏻")
- .font(.title)
- .bold()
- .padding(.top)
- .foregroundColor(.white)
- Text("Wise Night Owl")
- .font(.subheadline)
- .bold()
- .multilineTextAlignment(.center)
- .foregroundColor(.white)
- Spacer()
- }
- Image("Owl_Transparent")
- .resizable()
- .aspectRatio(contentMode: .fit)
- .clipShape(Circle())
- .shadow(radius: 100)
- .padding(.bottom, 20)
- .frame(width: 100)
- Button("View profile") {
- 
- }
- .foregroundColor(.white)
- 
- 
- }
- )
- 
- 
- 
- VStack {
-     RoundedRectangle(cornerRadius: 10.0)
-         .foregroundColor(Color(red: 0.569, green: 0.625, blue: 0.887))
-         .frame(width: UIScreen.main.bounds.width, height: 200)
-         .overlay(
-             HStack{
-                 VStack(alignment: .leading) {
-                     Text("Welcome👋🏻")
-                         .font(.title)
-                         .bold()
-                         .padding(.top)
-                         .foregroundColor(.white)
-                     Text("Wise Night Owl")
-                         .font(.subheadline)
-                         .bold()
-                         .multilineTextAlignment(.center)
-                         .foregroundColor(.white)
-                     Spacer()
-                 }
-                 Image("Owl_Transparent")
-                     .resizable()
-                     .aspectRatio(contentMode: .fit)
-                     .clipShape(Circle())
-                     .shadow(radius: 100)
-                     .padding(.bottom, 20)
-                     .frame(width: 100)
-
-                 // Inserisci il pulsante qui
-                 Button("View profile") {
-                     /* Azioni da eseguire quando il pulsante viene premuto */
-                 }
-                 .foregroundColor(.white)
-             }
-         )
- }
-*/

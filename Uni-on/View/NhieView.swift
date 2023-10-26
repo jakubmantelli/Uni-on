@@ -1,4 +1,3 @@
-
 //
 //  ContentView.swift
 //  neverhaveiever
@@ -10,11 +9,12 @@ import SwiftUI
 
 struct NhieView: View {
     var selectedCategories: Set<String>
-    
+    @State private var isAlertPresented = false
+    @State private var isActiveHomeView = false
     @State private var shuffledQuestions: [String] = []
     @State private var currentQuestionIndex: Int = 0
     @State private var isGameEnded = false
-    @State private var showCategorySelection = false
+    @State private var showHome = false
     
     var maxQuestionsToShow = 7  // Maximum number of questions to display
     
@@ -72,7 +72,7 @@ struct NhieView: View {
                 
                             Button("End Game"){
                                 isGameEnded = true
-                                showCategorySelection = true
+                                showHome = true
                             }
                            
                         } else {
@@ -84,12 +84,43 @@ struct NhieView: View {
                             }
                         }
                     
+                  
+                    
                 } //vstack end
             
                
-                    
+                //clickable quit button
+                        .toolbar {
+                            ToolbarItem(placement: .topBarTrailing) {
+                                Button("X") {
+                                    // Show the alert when the button is pressed
+                                    isAlertPresented.toggle()
+                                    
+                                }
+                                .padding()
+                                .font(.title2)
+                                .bold()
+                                .foregroundColor(.black)
+                            }
+                        }
+           
+
+                        //function alert
+                        .alert(isPresented: $isAlertPresented) {
+                            Alert(
+                                title: Text("Confirm"),
+                                message: Text("Go back to Homepage?"),
+                                primaryButton: .destructive(Text("Homepage")) {
+                                showHome = true
+                                      
+                                },
+                                
+                                secondaryButton: .cancel()
+                            )
+                        }
                 
                 
+             
                 
                 
                 .buttonStyle(.bordered)
@@ -102,7 +133,7 @@ struct NhieView: View {
                 
            
                 
-            .navigationBarItems(trailing: NavigationLink("", destination: DetailView(), isActive: $showCategorySelection))
+            .navigationBarItems(trailing: NavigationLink("", destination: HomeView(), isActive: $showHome))
             }
             
             
@@ -151,5 +182,3 @@ struct NhieView_Previews: PreviewProvider {
         NhieView(selectedCategories: Set(["Hobbies & Interests", "Movies & TV Shows"]))
     }
 }
-
-
