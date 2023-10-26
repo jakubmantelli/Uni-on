@@ -102,7 +102,7 @@ struct NhieView: View {
                 
            
                 
-            .navigationBarItems(trailing: NavigationLink("", destination: CategorySelectionView(), isActive: $showCategorySelection))
+            .navigationBarItems(trailing: NavigationLink("", destination: DetailView(), isActive: $showCategorySelection))
             }
             
             

@@ -77,9 +77,7 @@ struct DetailView: View {
                         .padding(.bottom, 30)
 
                     ZStack {
-                        Button(action: {
-                            // Azioni da eseguire quando il pulsante viene premuto
-                        }) {
+                        NavigationLink(destination: NhieOnboardingView()) {
                             Text("Start Game")
                                 .foregroundColor(.white)
                                 .frame(width: 200, height: 80)
@@ -163,7 +161,7 @@ struct DetailView: View {
              .frame(width: 200, height:200)
              )*/
             
-        }
+        }        .navigationBarBackButtonHidden(true)
         
         
         /*.padding(.bottom, 30)

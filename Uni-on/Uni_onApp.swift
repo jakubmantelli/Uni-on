@@ -11,7 +11,7 @@ import SwiftUI
 struct Uni_onApp: App {
     var body: some Scene {
         WindowGroup {
-            NhieOnboardingView()
+            DetailView()
         }
     }
 }
