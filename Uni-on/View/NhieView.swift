@@ -23,64 +23,92 @@ struct NhieView: View {
     }
     
     var body: some View {
+        
         NavigationView {
             
-            VStack {
-                if shuffledQuestions.isEmpty {
-                    Text("No questions available.")
-                        .font(.title)
-                } else {
-                    Text(categoryForQuestion(shuffledQuestions[currentQuestionIndex]))
-                        .font(.title)
-                        .padding(.top)
-                    
-                    
-                    
-                    Text("\(currentQuestionIndex + 1) of \(shuffledQuestions.count)")
-                        .font(.subheadline)
-                        .foregroundColor(.black)
-                        .padding()
-                    
-                    RoundedRectangle(cornerRadius: 21)
-                        .foregroundColor(ColorPallete.primary)
-                        .frame(width: 335, height: 335)
-                        .overlay(
-                            Text(shuffledQuestions[currentQuestionIndex])
-                            
-                                .font(.title3)
-                                .foregroundColor(.white)
-                                .multilineTextAlignment(.center)
-                                .padding())
-                          
-                }
-                
-                
-             
-                    if showEndGameButton {
-                        
             
-                        Button("End Game"){
-                            isGameEnded = true
-                            showCategorySelection = true
-                        }
+     
+            ZStack {
+                Color(ColorPallete.primaryLight)
+                    .ignoresSafeArea()
+                VStack {
+                    
+
+                    
+                    if shuffledQuestions.isEmpty {
+                        Text("No questions available.")
+                            .font(.title)
                     } else {
-                        Button("Next Prompt"){
+                        Text(categoryForQuestion(shuffledQuestions[currentQuestionIndex]))
+                            .font(.title)
+                            .bold()
+                            .padding(.top)
+                            .foregroundColor(.black)
                         
-                            if currentQuestionIndex < shuffledQuestions.count - 1 {
-                                currentQuestionIndex += 1
-                            }
-                            
-                        }
+                        
+                        
+                        Text("\(currentQuestionIndex + 1) of \(shuffledQuestions.count)")
+                            .font(.subheadline)
+                            .foregroundColor(.black)
+                            .padding()
+                        
+                        RoundedRectangle(cornerRadius: 21)
+                            .foregroundColor(ColorPallete.primary)
+                            .frame(width: 335, height: 335)
+                            .overlay(
+                                Text(shuffledQuestions[currentQuestionIndex])
+                                
+                                    .font(.title3)
+                                    .foregroundColor(.white)
+                                    .multilineTextAlignment(.center)
+                                    .padding())
+                            .padding(.bottom, 30)
                     }
+                    
+                    
+                 
+                        if showEndGameButton {
+                            
                 
-            }
-            .padding(.bottom, 100)
-            .bold()
-            .foregroundColor(.black)
-       
+                            Button("End Game"){
+                                isGameEnded = true
+                                showCategorySelection = true
+                            }
+                           
+                        } else {
+                            Button("Next Prompt"){
+                            
+                                if currentQuestionIndex < shuffledQuestions.count - 1 {
+                                    currentQuestionIndex += 1
+                                }
+                            }
+                        }
+                    
+                } //vstack end
             
-            .navigationBarItems(trailing: NavigationLink("", destination: CategorySelectionView(), isActive: $showCategorySelection))
-        }.navigationBarBackButtonHidden(true)
+               
+                    
+                
+                
+                
+                
+                .buttonStyle(.bordered)
+
+                .padding(.bottom, 100)
+               
+                .bold()
+                .foregroundColor(ColorPallete.primaryDark)
+                
+                
+           
+                
+            .navigationBarItems(trailing: NavigationLink("", destination: DetailView(), isActive: $showCategorySelection))
+            }
+            
+            
+        }
+        .navigationBarBackButtonHidden(true)
+        
         
             .onAppear {
                 shuffledQuestions = shuffleAndSelectQuestions()

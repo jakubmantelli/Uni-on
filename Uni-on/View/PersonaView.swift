@@ -10,11 +10,23 @@ import Foundation
 
 struct PersonaView: View {
     
+    
+    
     var Persona: Persona
     
+    
     var body: some View {
+        
         NavigationStack {
+            ColorPallete.primaryLight
+                .overlay(
                 VStack {
+                    
+                    Text("Congratulations")
+                        .bold()
+                        .font(.largeTitle)
+                        .multilineTextAlignment(.center)
+                    
                     
                     Image(Persona.imageName)
                         .resizable()
@@ -27,42 +39,52 @@ struct PersonaView: View {
                         .padding()
                     
                     Text(Persona.description1)
+                        .multilineTextAlignment(.center)
                         .font(.title)
                         .bold()
                     
                     Text(Persona.description2)
-                        .font(.title2)
+                        .font(.title)
                         .bold()
+                 
                     
+                    NavigationLink(destination: CategorySelectionView()) {
+                        Text("")
+                            .frame(width: 300, height: 50)
+                            .background(
+                                ZStack {
+                                    Rectangle()
+                                        .fill(Color.black)
+                                        .cornerRadius(8)
+                                    
+                                    HStack {
+                                        Image(systemName: "book.fill")
+                                            .resizable()
+                                            .frame(width: 20, height: 20)
+                                            .foregroundColor(.white)
+                                        
+                                        Text("Learn more about your persona")
+                                            .foregroundColor(.white)
+                                    }
+                                }
+                            )
+                    }
+            
+                }).ignoresSafeArea()
+            
+           
             
                 }
-            
-                .navigationTitle("Result")
-                .bold()
-                .font(.title)
-                .multilineTextAlignment(.center)
-            
-        }
-        Spacer()
-
-       // Button("Learn more about your persona", systemImage: "book", action: PersonaDetailViewModel.)
-         //   .padding()
-       //     .font(.body)
-           // .foregroundColor(.white)
-          //  .background(RoundedRectangle(cornerRadius: 12).foregroundColor(.black))
-           // .padding()
-        Spacer()
-        
+     
         }
     
     }
-
 
 
 #Preview {
     PersonaView(Persona:
                         Persona(description1: "You are a ...",
                                 description2: "Wise Night Owl 🦉",
-                                imageName: "Owl_Transparent")
+                                imageName: "OwlFull")
     )
 }

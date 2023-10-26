@@ -46,6 +46,7 @@ struct OnboardingContent: View {
                                 .underline()
                             Spacer(minLength: 20)
                         }
+                    
                         
                         Spacer(minLength: 80)
                         

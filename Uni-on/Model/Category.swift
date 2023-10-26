@@ -98,7 +98,7 @@ let allCategories = [
                                                             "Never have I ever posted a video online of me singing"
                                                             
     ]),
-    Category(name: "Books & Literature", question: [
+    Category(name: "Foods & Dining", question: [
                                                             "Never have I ever tried a bizarre food combination that actually tasted surprisingly good.",
                                                             "Never have I ever attempted to cook an exotic dish with friends, even if we didn't follow the recipe exactly.",
                                                             "Never have I ever had a late-night food adventure with friends, trying out local eateries.",
@@ -107,6 +107,17 @@ let allCategories = [
                                                             "Never have I ever used chopsticks",
                                                             "Never have I ever eaten junk food",
                                                             "Never have I ever eaten sea food"
+    ]),
+    Category(name: "Book & Literature", question: [
+                                                            "Never have I ever read a book in a single sitting because I couldn't put it down.",
+                                                            "Never have I ever joined a book club just to meet new people and have interesting discussions.",
+                                                            "Never have I ever created funny book-themed memes or jokes with friends.",
+                                                            "Never have I ever read a manga",
+                                                            "Never have I ever bought a book that i never read",
+                                                            "Never have I ever read a book on a train",
+                                                            "Never have I ever read a page of the Bible"
+                                                        
+    
     ]),
     Category(name: "Campus Events or Activities", question: [
                                                             "Never have I ever attended a campus event purely for the entertainment value, regardless of the theme.",
@@ -140,11 +151,12 @@ let allCategories = [
     ]),
     Category(name: "Adventures & Thrills", question: [
                                                             "Never have I ever gone skydiving.",
-                                                            "Never have I ever ridden a roller coaster.",
+                                                            "Never have I ever ridden on a roller coaster.",
                                                             "Never have I ever gone bungee jumping.",
                                                             "Never have I ever gone scuba diving.",
                                                             "Never have I ever gone skinny dipping.",
-                                                            "Never have I ever won a contest or competition."
+                                                            "Never have I ever won a contest or competition.",
+                                                            "Never have I ever ridden a motorbike"
                                             
                                                             
     ]),
@@ -163,7 +175,13 @@ let allCategories = [
                                                             "Never have I ever skipped a class or a meeting.",
                                                             "Never have I ever changed my major or career path.",
                                                             "Never have I ever had a job I hated.",
-                                                            "Never have I ever pulled an all-nighter for work or studying."
+                                                            "Never have I ever pulled an all-nighter for work or studying.",
+                                                            "Never have I ever cheated on a test or exam.",
+                                                            "Never have I ever received a scholarship or academic award.",
+                                                            "Never have I ever regretted not pursuing higher education.",
+                                                            "Never have I ever delivered a presentation or speech in front of a large audience.",
+                                                            "Never have I ever lied on my resume or job application.",
+                                                            "Never have I ever started my own business or side hustle."
                                                         
     ])
     

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		349C20EE2AEA723A00060C84 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 349C20ED2AEA723A00060C84 /* .gitignore */; };
+		372501E32AEA59CF00A143DA /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372501E22AEA59CF00A143DA /* ActivityView.swift */; };
+		372501E52AEA59E200A143DA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372501E42AEA59E200A143DA /* ProfileView.swift */; };
+		372501E72AEA59F500A143DA /* HomeNoQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372501E62AEA59F500A143DA /* HomeNoQuizView.swift */; };
+		372B82B52AEA5C6600DF7B3C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372B82B42AEA5C6600DF7B3C /* HomeView.swift */; };
 		374834222AE1300F00CFFA87 /* Uni_onApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374834212AE1300F00CFFA87 /* Uni_onApp.swift */; };
 		374834242AE1300F00CFFA87 /* NhieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374834232AE1300F00CFFA87 /* NhieView.swift */; };
 		374834262AE1301100CFFA87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 374834252AE1301100CFFA87 /* Assets.xcassets */; };
@@ -14,6 +19,10 @@
 		374834302AE1304F00CFFA87 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3748342F2AE1304F00CFFA87 /* Category.swift */; };
 		376DEFF72AE2F132002D8F4F /* CategorySelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376DEFF62AE2F132002D8F4F /* CategorySelectionView.swift */; };
 		3781731E2AE1D11F008C0815 /* NhieOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3781731D2AE1D11F008C0815 /* NhieOnboardingView.swift */; };
+		6B2A29C82AEA7AAE0045E669 /* QuestionnaireModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2A29C72AEA7AAE0045E669 /* QuestionnaireModel.swift */; };
+		6B2A29CA2AEA7ACD0045E669 /* QuestionnaireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2A29C92AEA7ACD0045E669 /* QuestionnaireView.swift */; };
+		6B2A29CC2AEA7AEB0045E669 /* QuestionnaireViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2A29CB2AEA7AEB0045E669 /* QuestionnaireViewModel.swift */; };
+		6B2A29CE2AEA7B0A0045E669 /* QuestionnaireViewSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2A29CD2AEA7B0A0045E669 /* QuestionnaireViewSample.swift */; };
 		6B7AC9822AE27BA3005079DC /* ColorPallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7AC9812AE27BA3005079DC /* ColorPallete.swift */; };
 		B23043EC2AE6864C00E2F945 /* ResultLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23043EB2AE6864C00E2F945 /* ResultLoading.swift */; };
 		B2B72B452AE590AA0049C265 /* OnboardingContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B72B442AE590AA0049C265 /* OnboardingContent.swift */; };
@@ -23,6 +32,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		349C20ED2AEA723A00060C84 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
+		372501E22AEA59CF00A143DA /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		372501E42AEA59E200A143DA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		372501E62AEA59F500A143DA /* HomeNoQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNoQuizView.swift; sourceTree = "<group>"; };
+		372B82B42AEA5C6600DF7B3C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3748341E2AE1300F00CFFA87 /* Uni-on.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Uni-on.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		374834212AE1300F00CFFA87 /* Uni_onApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uni_onApp.swift; sourceTree = "<group>"; };
 		374834232AE1300F00CFFA87 /* NhieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NhieView.swift; sourceTree = "<group>"; };
@@ -31,6 +45,10 @@
 		3748342F2AE1304F00CFFA87 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		376DEFF62AE2F132002D8F4F /* CategorySelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectionView.swift; sourceTree = "<group>"; };
 		3781731D2AE1D11F008C0815 /* NhieOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NhieOnboardingView.swift; sourceTree = "<group>"; };
+		6B2A29C72AEA7AAE0045E669 /* QuestionnaireModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuestionnaireModel.swift; path = "../../../../../.Trash/Uni-on/Model/QuestionnaireModel.swift"; sourceTree = "<group>"; };
+		6B2A29C92AEA7ACD0045E669 /* QuestionnaireView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireView.swift; sourceTree = "<group>"; };
+		6B2A29CB2AEA7AEB0045E669 /* QuestionnaireViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireViewModel.swift; sourceTree = "<group>"; };
+		6B2A29CD2AEA7B0A0045E669 /* QuestionnaireViewSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireViewSample.swift; sourceTree = "<group>"; };
 		6B7AC9812AE27BA3005079DC /* ColorPallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPallete.swift; sourceTree = "<group>"; };
 		B23043EB2AE6864C00E2F945 /* ResultLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultLoading.swift; sourceTree = "<group>"; };
 		B2B72B442AE590AA0049C265 /* OnboardingContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContent.swift; sourceTree = "<group>"; };
@@ -69,6 +87,7 @@
 		374834202AE1300F00CFFA87 /* Uni-on */ = {
 			isa = PBXGroup;
 			children = (
+				349C20ED2AEA723A00060C84 /* .gitignore */,
 				374834212AE1300F00CFFA87 /* Uni_onApp.swift */,
 				3781731C2AE1D10D008C0815 /* Model */,
 				3781731B2AE1D106008C0815 /* View */,
@@ -90,6 +109,10 @@
 		3781731B2AE1D106008C0815 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				372B82B42AEA5C6600DF7B3C /* HomeView.swift */,
+				372501E62AEA59F500A143DA /* HomeNoQuizView.swift */,
+				372501E42AEA59E200A143DA /* ProfileView.swift */,
+				372501E22AEA59CF00A143DA /* ActivityView.swift */,
 				3781731D2AE1D11F008C0815 /* NhieOnboardingView.swift */,
 				376DEFF62AE2F132002D8F4F /* CategorySelectionView.swift */,
 				374834232AE1300F00CFFA87 /* NhieView.swift */,
@@ -97,6 +120,8 @@
 				B2B72B442AE590AA0049C265 /* OnboardingContent.swift */,
 				B23043EB2AE6864C00E2F945 /* ResultLoading.swift */,
 				B2FD7F6C2AE68EED005F7962 /* EntryAnimation.swift */,
+				6B2A29C92AEA7ACD0045E669 /* QuestionnaireView.swift */,
+				6B2A29CD2AEA7B0A0045E669 /* QuestionnaireViewSample.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -104,8 +129,9 @@
 		3781731C2AE1D10D008C0815 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3748342F2AE1304F00CFFA87 /* Questions.swift */,
+				3748342F2AE1304F00CFFA87 /* Category.swift */,
 				B2CCF9B22AE4295B00EC82FB /* OnboardingModel.swift */,
+				6B2A29C72AEA7AAE0045E669 /* QuestionnaireModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -114,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				6B7AC9812AE27BA3005079DC /* ColorPallete.swift */,
+				6B2A29CB2AEA7AEB0045E669 /* QuestionnaireViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -177,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				374834292AE1301100CFFA87 /* Preview Assets.xcassets in Resources */,
+				349C20EE2AEA723A00060C84 /* .gitignore in Resources */,
 				374834262AE1301100CFFA87 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,14 +216,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				374834302AE1304F00CFFA87 /* Questions.swift in Sources */,
+				374834302AE1304F00CFFA87 /* Category.swift in Sources */,
+				372501E32AEA59CF00A143DA /* ActivityView.swift in Sources */,
 				B2B72B452AE590AA0049C265 /* OnboardingContent.swift in Sources */,
+				372B82B52AEA5C6600DF7B3C /* HomeView.swift in Sources */,
 				B2FD7F6D2AE68EED005F7962 /* EntryAnimation.swift in Sources */,
 				374834242AE1300F00CFFA87 /* NhieView.swift in Sources */,
 				374834222AE1300F00CFFA87 /* Uni_onApp.swift in Sources */,
 				376DEFF72AE2F132002D8F4F /* CategorySelectionView.swift in Sources */,
 				B2CCF9B32AE4295B00EC82FB /* OnboardingModel.swift in Sources */,
 				B23043EC2AE6864C00E2F945 /* ResultLoading.swift in Sources */,
+				372501E52AEA59E200A143DA /* ProfileView.swift in Sources */,
+				6B2A29CA2AEA7ACD0045E669 /* QuestionnaireView.swift in Sources */,
+				6B2A29CE2AEA7B0A0045E669 /* QuestionnaireViewSample.swift in Sources */,
+				6B2A29CC2AEA7AEB0045E669 /* QuestionnaireViewModel.swift in Sources */,
+				6B2A29C82AEA7AAE0045E669 /* QuestionnaireModel.swift in Sources */,
+				372501E72AEA59F500A143DA /* HomeNoQuizView.swift in Sources */,
 				3781731E2AE1D11F008C0815 /* NhieOnboardingView.swift in Sources */,
 				B2CCF9B62AE4298500EC82FB /* Onboarding.swift in Sources */,
 				6B7AC9822AE27BA3005079DC /* ColorPallete.swift in Sources */,
