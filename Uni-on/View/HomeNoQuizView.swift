@@ -33,6 +33,7 @@ struct HomeNoQuizView: View {
                                         .foregroundColor(.white)
                                         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                                         .offset(x:20)
+                                        
                                     
                                     Text("Discover your communication style!")
                                         .font(.body)
@@ -45,7 +46,7 @@ struct HomeNoQuizView: View {
                                     
                                     
                                     NavigationLink(destination: EmptyView()) {
-                                        Text("Take a Quiz")
+                                        Text("Take Quiz")
                                         // Image(systemName: "hand.point.up.left.fill")
                                         
                                             .font(.subheadline)

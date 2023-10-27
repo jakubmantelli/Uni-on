@@ -20,7 +20,7 @@ struct QuestionnaireView: View {
     var body: some View {
         ZStack {
             NavigationView {
-                PageView(page: <#Page#> ) {
+               // PageView(page: <#Page#> ) {
                     
                     Group { // Group to define the scope for .navigationBarTitle
                         VStack {
@@ -96,7 +96,7 @@ struct QuestionnaireView: View {
                 .navigationBarItems(trailing: NavigationLink("", destination: ResultLoading(), isActive: $isLastPage))
 
             }
-        }
+    //    }
     }
 }
 

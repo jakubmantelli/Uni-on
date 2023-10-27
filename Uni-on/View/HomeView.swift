@@ -40,16 +40,15 @@ struct HomeView: View {
                                                 .foregroundColor(.white)
                                                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                                                 .padding(.bottom, 50)
-                                            
                                                 .offset(y:10)
                                                 .lineLimit(2)
-                                            
-                                            Text("View Profile")
-                                                .foregroundColor(.white)
+                                                .minimumScaleFactor(0.5)
+                                         //   Text("View Profile")
+                                         //       .foregroundColor(.white)
                                         
-                                                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                                         //       .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                                      
-                                                .offset(y: -30)
+                                          //      .offset(y: -30)
                                             
                                             
                                         }
@@ -98,7 +97,7 @@ struct HomeView: View {
                             
                         } .padding(.bottom, 150)
                         
-                        Text("Tap to begin...")
+                        Text("Tap to begin")
                             .font(.subheadline)
                             .foregroundColor(ColorPallete.primary)
                             .offset(y: -200)
