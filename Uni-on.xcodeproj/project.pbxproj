@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		340399B32AEBB38200B0398F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340399B22AEBB38200B0398F /* ProfileView.swift */; };
+		340399B52AEBB38A00B0398F /* Persona.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340399B42AEBB38A00B0398F /* Persona.swift */; };
+		340399B72AEBB3A400B0398F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340399B62AEBB3A400B0398F /* HomeView.swift */; };
+		340399B92AEBB3B200B0398F /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340399B82AEBB3B200B0398F /* DetailView.swift */; };
+		340399BB2AEBB3CC00B0398F /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340399BA2AEBB3CC00B0398F /* ActivityView.swift */; };
+		340399BD2AEBB3FF00B0398F /* PersonaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340399BC2AEBB3FF00B0398F /* PersonaView.swift */; };
+		340399BF2AEBBD5000B0398F /* PersonaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340399BE2AEBBD5000B0398F /* PersonaViewModel.swift */; };
 		343C660F2AEA703E00F30A69 /* HomeNoQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343C660E2AEA703E00F30A69 /* HomeNoQuizView.swift */; };
 		374834222AE1300F00CFFA87 /* Uni_onApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374834212AE1300F00CFFA87 /* Uni_onApp.swift */; };
 		374834242AE1300F00CFFA87 /* NhieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374834232AE1300F00CFFA87 /* NhieView.swift */; };
@@ -24,6 +31,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		340399B22AEBB38200B0398F /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = "Uni-on/ProfileView.swift"; sourceTree = SOURCE_ROOT; };
+		340399B42AEBB38A00B0398F /* Persona.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persona.swift; sourceTree = "<group>"; };
+		340399B62AEBB3A400B0398F /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		340399B82AEBB3B200B0398F /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		340399BA2AEBB3CC00B0398F /* ActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		340399BC2AEBB3FF00B0398F /* PersonaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonaView.swift; sourceTree = "<group>"; };
+		340399BE2AEBBD5000B0398F /* PersonaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonaViewModel.swift; sourceTree = "<group>"; };
 		343C660E2AEA703E00F30A69 /* HomeNoQuizView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNoQuizView.swift; sourceTree = "<group>"; };
 		3748341E2AE1300F00CFFA87 /* Uni-on.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Uni-on.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		374834212AE1300F00CFFA87 /* Uni_onApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uni_onApp.swift; sourceTree = "<group>"; };
@@ -92,6 +106,12 @@
 		3781731B2AE1D106008C0815 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				340399BC2AEBB3FF00B0398F /* PersonaView.swift */,
+				340399BE2AEBBD5000B0398F /* PersonaViewModel.swift */,
+				340399B22AEBB38200B0398F /* ProfileView.swift */,
+				340399B62AEBB3A400B0398F /* HomeView.swift */,
+				340399B82AEBB3B200B0398F /* DetailView.swift */,
+				340399BA2AEBB3CC00B0398F /* ActivityView.swift */,
 				343C660E2AEA703E00F30A69 /* HomeNoQuizView.swift */,
 				3781731D2AE1D11F008C0815 /* NhieOnboardingView.swift */,
 				376DEFF62AE2F132002D8F4F /* CategorySelectionView.swift */,
@@ -109,6 +129,7 @@
 			children = (
 				3748342F2AE1304F00CFFA87 /* Category.swift */,
 				B2CCF9B22AE4295B00EC82FB /* OnboardingModel.swift */,
+				340399B42AEBB38A00B0398F /* Persona.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -192,20 +213,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				374834302AE1304F00CFFA87 /* Category.swift in Sources */,
+				340399B32AEBB38200B0398F /* ProfileView.swift in Sources */,
 				B2B72B452AE590AA0049C265 /* OnboardingContent.swift in Sources */,
-				372B82B52AEA5C6600DF7B3C /* HomeView.swift in Sources */,
+				340399B72AEBB3A400B0398F /* HomeView.swift in Sources */,
 				B2FD7F6D2AE68EED005F7962 /* EntryAnimation.swift in Sources */,
 				374834242AE1300F00CFFA87 /* NhieView.swift in Sources */,
 				374834222AE1300F00CFFA87 /* Uni_onApp.swift in Sources */,
+				340399B52AEBB38A00B0398F /* Persona.swift in Sources */,
 				376DEFF72AE2F132002D8F4F /* CategorySelectionView.swift in Sources */,
+				340399BB2AEBB3CC00B0398F /* ActivityView.swift in Sources */,
+				340399B92AEBB3B200B0398F /* DetailView.swift in Sources */,
 				B2CCF9B32AE4295B00EC82FB /* OnboardingModel.swift in Sources */,
 				B23043EC2AE6864C00E2F945 /* ResultLoading.swift in Sources */,
-				372501E52AEA59E200A143DA /* ProfileView.swift in Sources */,
-				372501E72AEA59F500A143DA /* HomeNoQuizView.swift in Sources */,
 				3781731E2AE1D11F008C0815 /* NhieOnboardingView.swift in Sources */,
 				343C660F2AEA703E00F30A69 /* HomeNoQuizView.swift in Sources */,
+				340399BF2AEBBD5000B0398F /* PersonaViewModel.swift in Sources */,
 				B2CCF9B62AE4298500EC82FB /* Onboarding.swift in Sources */,
 				6B7AC9822AE27BA3005079DC /* ColorPallete.swift in Sources */,
+				340399BD2AEBB3FF00B0398F /* PersonaView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

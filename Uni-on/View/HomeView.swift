@@ -20,35 +20,34 @@ struct HomeView: View {
                         .foregroundColor(.gray)
                     RoundedRectangle(cornerRadius: 10)
                         .foregroundColor(ColorPallete.primary)
-                        .frame(width:361, height: 154)
+                        .frame(width:361, height: 190)
                         .overlay(
                             NavigationLink(destination: ProfileView()) {
                                 HStack {
                                     VStack {
-                                        
                                             Text("Welcome👋🏻")
-                                                .font(.title)
+                                                .font(.title2)
                                                 .bold()
                                                 .foregroundColor(.white)
                                                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                                                 .offset(y:10)
                                             
                                             
-                                            Text("Compassionate Dolphin")
-                                                .font(.title)
+                                            Text("Compassionate \nDolphin")
+                                            .font(.title2)
                                                 .bold()
                                                 .foregroundColor(.white)
                                                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-                                                .padding(.bottom, 50)
-                                                .offset(y:10)
+                                                //.padding(.bottom, 50)
+                                                .offset(y:-10)
                                                 .lineLimit(2)
-                                                .minimumScaleFactor(0.5)
-                                         //   Text("View Profile")
-                                         //       .foregroundColor(.white)
+                                            //    .minimumScaleFactor(0.5)
+                                           Text("View Profile")
+                                              .foregroundColor(.white)
                                         
-                                         //       .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                                               .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                                      
-                                          //      .offset(y: -30)
+                                            .offset(y: -20)
                                             
                                             
                                         }
@@ -56,11 +55,12 @@ struct HomeView: View {
                                         .multilineTextAlignment(.leading)
                                         .padding(.leading, 20)
                                         
-                                        Image("Owl_Transparent")
+                                        Image("OwlFull")
                                             .resizable()
                                             .aspectRatio(contentMode: .fit)
                                             .clipShape(Circle())
                                             .frame(width: 120)
+                                    
                                         
                                         
                                            

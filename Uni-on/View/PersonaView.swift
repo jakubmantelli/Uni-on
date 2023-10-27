@@ -48,7 +48,7 @@ struct PersonaView: View {
                         .bold()
                  
                     
-                    NavigationLink(destination: CategorySelectionView()) {
+                    NavigationLink(destination: ProfileView()) {
                         Text("")
                             .frame(width: 300, height: 50)
                             .background(
@@ -83,7 +83,7 @@ struct PersonaView: View {
 
 #Preview {
     PersonaView(Persona:
-                        Persona(description1: "You are a ...",
+                    Persona(description1:"",
                                 description2: "Wise Night Owl 🦉",
                                 imageName: "OwlFull")
     )

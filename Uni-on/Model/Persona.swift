@@ -12,7 +12,7 @@ struct Persona: Identifiable {
     
     var id: UUID = UUID()
     
-    var description1: String
+    var description1: String = "You are a ..."
     var description2: String
     var imageName: String
     
