@@ -27,6 +27,28 @@ struct RadioButton: View {
     }
 }
 
+struct AnswerBackground: View {
+    @Binding var checked: Bool
+
+    var body: some View {
+        ZStack {
+            Color(.white)
+                //.padding(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
+                .frame(maxHeight: 75, alignment: .center)
+                .onTapGesture {
+                    self.checked.toggle()
+                }
+            if checked {
+                RoundedRectangle(cornerRadius: 10)
+                    .fill(ColorPallete.primaryLight)
+                    .padding(.init(top: 5, leading: 10, bottom: 5, trailing: 10))
+                    .frame(maxHeight: 60, alignment: .center)
+
+            }
+        }
+    }
+}
+
 
 
 class QuestionnaireViewModel: ObservableObject {
