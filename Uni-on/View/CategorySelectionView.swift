@@ -1,4 +1,4 @@
-    //
+//
     //  CategorySelectionView.swift
     //  Uni-on
     //
@@ -33,7 +33,7 @@ struct CategorySelectionView: View {
                   
                 
 
-                Text("or shuffle it up for mixed categories!")
+                Text("or Shuffle for random categories!")
                     .font(.title2)
                     .multilineTextAlignment(.center)
                     .bold()
@@ -131,7 +131,3 @@ struct CategorySelectionView_Previews: PreviewProvider {
         CategorySelectionView()
     }
 }
-
-    
-    
-

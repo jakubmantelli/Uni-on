@@ -131,7 +131,7 @@ struct ProfileView: View {
                         
                     }
                     .padding(20)
-                }
+                } .preferredColorScheme(.light) //force light mode
             }
             
                 
