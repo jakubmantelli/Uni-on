@@ -20,7 +20,7 @@ struct QuestionnaireView: View {
     var body: some View {
         ZStack {
             NavigationView {
-               // PageView(page: <#Page#> ) {
+                //PageView(page: viewModel ) {
                     
                     Group { // Group to define the scope for .navigationBarTitle
                         VStack {
@@ -91,12 +91,12 @@ struct QuestionnaireView: View {
                         .safeAreaPadding(0)
                     }
                     .navigationBarTitle("Question \(viewModel.currentQuestion?.questionNumber ?? 0)/7", displayMode: .inline)
-                }            
+                }
                 .navigationBarTitle("Page View")
                 .navigationBarItems(trailing: NavigationLink("", destination: ResultLoading(), isActive: $isLastPage))
-
+                
             }
-    //    }
+   //     }
     }
 }
 
