@@ -9,52 +9,13 @@ import Foundation
 import Combine
 import SwiftUI
 
-struct RadioButton: View {
-    @Binding var checked: Bool
-
-    var body: some View {
-        ZStack {
-            Image(systemName: "circle")
-                .foregroundColor(.gray)
-                .onTapGesture {
-                    self.checked.toggle()
-                }
-            if checked {
-                Image(systemName: "checkmark.circle")
-                    .foregroundColor(ColorPallete.primary)
-            }
-        }
-    }
-}
-
-struct AnswerBackground: View {
-    @Binding var checked: Bool
-
-    var body: some View {
-        ZStack {
-            Color(.white)
-                //.padding(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
-                .frame(maxHeight: 75, alignment: .center)
-                .onTapGesture {
-                    self.checked.toggle()
-                }
-            if checked {
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(ColorPallete.primaryLight)
-                    .padding(.init(top: 5, leading: 10, bottom: 5, trailing: 10))
-                    .frame(maxHeight: 60, alignment: .center)
-
-            }
-        }
-    }
-}
-
-
-
 class QuestionnaireViewModel: ObservableObject {
     @Published var currentQuestionIndex = 0
     @Published var userAnswers: [Int] = []
-    
+    @Published var assignedPersona: Persona?
+    @Published var shouldNavigateToResultLoading = false
+
+
     let questions: [OnboardingQuestionnaire]
     
     init(questions: [OnboardingQuestionnaire]) {
@@ -76,6 +37,15 @@ class QuestionnaireViewModel: ObservableObject {
         }
     }
     
+    func assignPersona() {
+        let totalScore = calculateUserScore()
+        assignedPersona = OnboardingQuestionnaire.persona(forScore: totalScore)
+    }
+
+    func moveToResultLoading() {
+        shouldNavigateToResultLoading = true
+    }
+
     func userSelectedAnswer(at index: Int) {
         userAnswers.append(currentQuestion?.questionAnswersPoints[index] ?? 0)
     }
@@ -90,5 +60,3 @@ class QuestionnaireViewModel: ObservableObject {
     }
 
 }
-
-

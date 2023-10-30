@@ -21,8 +21,12 @@
 		3781731E2AE1D11F008C0815 /* NhieOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3781731D2AE1D11F008C0815 /* NhieOnboardingView.swift */; };
 		6B2A29CA2AEA7ACD0045E669 /* QuestionnaireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2A29C92AEA7ACD0045E669 /* QuestionnaireView.swift */; };
 		6B2A29CC2AEA7AEB0045E669 /* QuestionnaireViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2A29CB2AEA7AEB0045E669 /* QuestionnaireViewModel.swift */; };
-		6B2A29CE2AEA7B0A0045E669 /* QuestionnaireViewSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2A29CD2AEA7B0A0045E669 /* QuestionnaireViewSample.swift */; };
 		6B4DBBD62AEBA602003352CF /* QuestionnaireModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4DBBD52AEBA602003352CF /* QuestionnaireModel.swift */; };
+		6B4DBBD92AEE21A0003352CF /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4DBBD82AEE21A0003352CF /* RadioButton.swift */; };
+		6B4DBBDB2AEE21F2003352CF /* AnswerBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4DBBDA2AEE21F2003352CF /* AnswerBackground.swift */; };
+		6B4DBBDD2AEE2590003352CF /* AnswerOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4DBBDC2AEE2590003352CF /* AnswerOptionView.swift */; };
+		6B4DBBDF2AEE3705003352CF /* PageIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4DBBDE2AEE3705003352CF /* PageIndicator.swift */; };
+		6B4DBBE12AEE37F1003352CF /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4DBBE02AEE37F1003352CF /* QuestionView.swift */; };
 		6B7AC9822AE27BA3005079DC /* ColorPallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7AC9812AE27BA3005079DC /* ColorPallete.swift */; };
 		B23043EC2AE6864C00E2F945 /* ResultLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23043EB2AE6864C00E2F945 /* ResultLoading.swift */; };
 		B2B72B452AE590AA0049C265 /* OnboardingContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B72B442AE590AA0049C265 /* OnboardingContent.swift */; };
@@ -47,8 +51,12 @@
 		3781731D2AE1D11F008C0815 /* NhieOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NhieOnboardingView.swift; sourceTree = "<group>"; };
 		6B2A29C92AEA7ACD0045E669 /* QuestionnaireView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireView.swift; sourceTree = "<group>"; };
 		6B2A29CB2AEA7AEB0045E669 /* QuestionnaireViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireViewModel.swift; sourceTree = "<group>"; };
-		6B2A29CD2AEA7B0A0045E669 /* QuestionnaireViewSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireViewSample.swift; sourceTree = "<group>"; };
 		6B4DBBD52AEBA602003352CF /* QuestionnaireModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireModel.swift; sourceTree = "<group>"; };
+		6B4DBBD82AEE21A0003352CF /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
+		6B4DBBDA2AEE21F2003352CF /* AnswerBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerBackground.swift; sourceTree = "<group>"; };
+		6B4DBBDC2AEE2590003352CF /* AnswerOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerOptionView.swift; sourceTree = "<group>"; };
+		6B4DBBDE2AEE3705003352CF /* PageIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageIndicator.swift; sourceTree = "<group>"; };
+		6B4DBBE02AEE37F1003352CF /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		6B7AC9812AE27BA3005079DC /* ColorPallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPallete.swift; sourceTree = "<group>"; };
 		B23043EB2AE6864C00E2F945 /* ResultLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultLoading.swift; sourceTree = "<group>"; };
 		B2B72B442AE590AA0049C265 /* OnboardingContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContent.swift; sourceTree = "<group>"; };
@@ -109,6 +117,7 @@
 		3781731B2AE1D106008C0815 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6B4DBBD72AEBF8B3003352CF /* Common */,
 				372B82B42AEA5C6600DF7B3C /* HomeView.swift */,
 				372501E62AEA59F500A143DA /* HomeNoQuizView.swift */,
 				372501E42AEA59E200A143DA /* ProfileView.swift */,
@@ -120,8 +129,8 @@
 				B2B72B442AE590AA0049C265 /* OnboardingContent.swift */,
 				B23043EB2AE6864C00E2F945 /* ResultLoading.swift */,
 				B2FD7F6C2AE68EED005F7962 /* EntryAnimation.swift */,
+				6B4DBBE02AEE37F1003352CF /* QuestionView.swift */,
 				6B2A29C92AEA7ACD0045E669 /* QuestionnaireView.swift */,
-				6B2A29CD2AEA7B0A0045E669 /* QuestionnaireViewSample.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -134,6 +143,17 @@
 				6B4DBBD52AEBA602003352CF /* QuestionnaireModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		6B4DBBD72AEBF8B3003352CF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				6B4DBBD82AEE21A0003352CF /* RadioButton.swift */,
+				6B4DBBDA2AEE21F2003352CF /* AnswerBackground.swift */,
+				6B4DBBDC2AEE2590003352CF /* AnswerOptionView.swift */,
+				6B4DBBDE2AEE3705003352CF /* PageIndicator.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		6B7AC9832AE27E51005079DC /* ViewModel */ = {
@@ -219,17 +239,21 @@
 				374834302AE1304F00CFFA87 /* Category.swift in Sources */,
 				372501E32AEA59CF00A143DA /* ActivityView.swift in Sources */,
 				B2B72B452AE590AA0049C265 /* OnboardingContent.swift in Sources */,
+				6B4DBBDB2AEE21F2003352CF /* AnswerBackground.swift in Sources */,
 				372B82B52AEA5C6600DF7B3C /* HomeView.swift in Sources */,
 				B2FD7F6D2AE68EED005F7962 /* EntryAnimation.swift in Sources */,
+				6B4DBBDF2AEE3705003352CF /* PageIndicator.swift in Sources */,
 				374834242AE1300F00CFFA87 /* NhieView.swift in Sources */,
+				6B4DBBDD2AEE2590003352CF /* AnswerOptionView.swift in Sources */,
 				374834222AE1300F00CFFA87 /* Uni_onApp.swift in Sources */,
+				6B4DBBD92AEE21A0003352CF /* RadioButton.swift in Sources */,
 				376DEFF72AE2F132002D8F4F /* CategorySelectionView.swift in Sources */,
 				B2CCF9B32AE4295B00EC82FB /* OnboardingModel.swift in Sources */,
 				B23043EC2AE6864C00E2F945 /* ResultLoading.swift in Sources */,
 				372501E52AEA59E200A143DA /* ProfileView.swift in Sources */,
 				6B4DBBD62AEBA602003352CF /* QuestionnaireModel.swift in Sources */,
+				6B4DBBE12AEE37F1003352CF /* QuestionView.swift in Sources */,
 				6B2A29CA2AEA7ACD0045E669 /* QuestionnaireView.swift in Sources */,
-				6B2A29CE2AEA7B0A0045E669 /* QuestionnaireViewSample.swift in Sources */,
 				6B2A29CC2AEA7AEB0045E669 /* QuestionnaireViewModel.swift in Sources */,
 				372501E72AEA59F500A143DA /* HomeNoQuizView.swift in Sources */,
 				3781731E2AE1D11F008C0815 /* NhieOnboardingView.swift in Sources */,
@@ -389,6 +413,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Debug;
 		};

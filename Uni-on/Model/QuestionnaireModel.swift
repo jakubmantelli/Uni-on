@@ -28,8 +28,8 @@ struct OnboardingQuestionnaire: Identifiable, Equatable {
     var score: Int {
         return questionAnswersPoints.reduce(0, +)
     }
-
-    var persona: Persona {
+    
+    static func persona(forScore score: Int) -> Persona {
         switch score {
         case 26...:
             return .A   // Persona A (Direct Communicator / Quick Quokka)
@@ -43,6 +43,22 @@ struct OnboardingQuestionnaire: Identifiable, Equatable {
             return .A   // Default to Persona A if score is out of range
         }
     }
+
+
+//    var persona: Persona {
+//        switch score {
+//        case 26...:
+//            return .A   // Persona A (Direct Communicator / Quick Quokka)
+//        case 20...25:
+//            return .B   // Persona B (Analytical Communicator / Wise Night Owl)
+//        case 14...19:
+//            return .C   // Persona C (Expressive Communicator / Vibrant Peacock)
+//        case 7...13:
+//            return .D   // Persona D (Empathetic Communicator / Compassionate Dolphin)
+//        default:
+//            return .A   // Default to Persona A if score is out of range
+//        }
+//    }
 }
 
 let questionData: [(Int, String, String, String, [String], [Int])] = [
