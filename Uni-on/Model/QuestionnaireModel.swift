@@ -62,7 +62,7 @@ struct OnboardingQuestionnaire: Identifiable, Equatable {
 }
 
 let questionData: [(Int, String, String, String, [String], [Int])] = [
-    (1, "You're in a dense forest, and you hear an unfamiliar sound in the distance.", "What's your instinctive reaction?", "survey1", ["Be brave and follow the sound to investigate", "Stay quiet, observe your surroundings", "Retreat cautiously to a safer spot", "Try to identify the sound before taking any action"], [4, 3, 2, 1]),
+    (1, "You're in a dense forest, and you hear an unfamiliar sound.", "What's your instinctive reaction?", "survey1", ["Be brave and follow the sound to investigate", "Stay quiet, observe your surroundings", "Retreat cautiously to a safer spot", "Try to identify the sound before taking any action"], [4, 3, 2, 1]),
     (2, "You find yourself at a spontaneous party with strangers.", "How do you feel and respond?", "survey2", ["Excited and eager to join the festivities", "Calm but observant, waiting for a chance to mingle", "A bit anxious, preferring to stay on the sidelines", "Actively introduce yourself and initiate conversations"], [1, 3, 2, 4]),
     (3, "You discover a lost wallet on the street.", "What do you do?", "survey3", ["Immediately try to find the owner", "Check for identification and contact the owner later", "Leave it where you found it and move on", "Hold onto it and then actively seek for the owner later"], [4, 3, 1, 2]),
     (4, "Your outdoor plans get canceled due to unexpected rain.", "How do you adapt?", "survey4", ["Find an indoor activity or board game to enjoy", "Embrace the rain and continue with outdoor plans", "Use the alternative plan you prepared beforehand", "Suggest alternative indoor activities and consider everyone's preferences"], [1, 4, 3, 2]),

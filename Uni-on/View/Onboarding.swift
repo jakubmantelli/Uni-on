@@ -48,6 +48,7 @@ struct PageView: View {
             
             
         }
+        .navigationBarBackButtonHidden(true)
         
     }
     

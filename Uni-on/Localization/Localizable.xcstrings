@@ -1,0 +1,340 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    "%lld of %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld of %2$lld"
+          }
+        }
+      }
+    },
+    "• Complimentary between analytical and expressive comunication styles" : {
+      "localizations" : {
+        "ko-KR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 분석적 의사소통 스타일과 표현적 의사소통 스타일 사이의 보완"
+          }
+        }
+      }
+    },
+    "• Prefer to rely on facts and analysis when making decisions or conveying information" : {
+      "localizations" : {
+        "ko-KR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 결정을 내리거나 정보를 전달할 때 사실과 분석에 의존하는 것을 선호합니다."
+          }
+        }
+      }
+    },
+    "• Prioritize precision and accuracy in their communication style" : {
+      "localizations" : {
+        "ko-KR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 의사소통 스타일의 정확성과 정확성을 우선시합니다."
+          }
+        }
+      }
+    },
+    "• Take a look at your profile to learn more" : {
+      "localizations" : {
+        "ko-KR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 자세한 내용은 프로필을 살펴보세요."
+          }
+        }
+      }
+    },
+    "• Value data-driven and logical communication" : {
+      "localizations" : {
+        "ko-KR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "• 데이터 중심적이고 논리적인 커뮤니케이션을 중요하게 생각합니다."
+          }
+        }
+      }
+    },
+    "7 of 7" : {
+
+    },
+    "About You" : {
+      "localizations" : {
+        "ko-KR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "당신에 대해"
+          }
+        }
+      }
+    },
+    "All done!" : {
+      "localizations" : {
+        "ko-KR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "모두 완료되었습니다!"
+          }
+        }
+      }
+    },
+    "All it takes is a tap to get to know \n the people around you" : {
+      "localizations" : {
+        "ko-KR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "탭 한 번이면 알 수 있어요\n  당신 주변의 사람들"
+          }
+        }
+      }
+    },
+    "Bonus Prompt 🎉\nfor Wise Night Owls" : {
+
+    },
+    "Book Nook Club 📚" : {
+      "localizations" : {
+        "ko-KR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "북누크클럽 📚"
+          }
+        }
+      }
+    },
+    "Challenge your college pals with some mind-bending scenarios and puzzles. It's a test of wit and creativity that'll keep your group entertained and engaged" : {
+      "localizations" : {
+        "ko-KR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "놀라운 시나리오와 퍼즐로 대학생 친구들에게 도전해보세요. 그룹을 즐겁게 하고 참여하게 만드는 재치와 창의성의 테스트입니다."
+          }
+        }
+      }
+    },
+    "Compassionate \nDolphin" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ko-KR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "인정 많은돌고래"
+          }
+        }
+      }
+    },
+    "Confirm" : {
+      "localizations" : {
+        "ko-KR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "확인하다"
+          }
+        }
+      }
+    },
+    "Congratulations!" : {
+      "localizations" : {
+        "ko-KR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "축하해요!"
+          }
+        }
+      }
+    },
+    "Data Dive Party 🍾" : {
+      "localizations" : {
+        "ko-KR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "데이터 다이브 파티 🍾"
+          }
+        }
+      }
+    },
+    "Debate Duel 🤺" : {
+      "localizations" : {
+        "ko-KR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "토론 결투 🤺"
+          }
+        }
+      }
+    },
+    "Deepen relationships one revelation at a time" : {
+      "localizations" : {
+        "ko-KR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "한 번에 하나씩 밝혀지면서 관계가 깊어집니다."
+          }
+        }
+      }
+    },
+    "Discover your communication style!" : {
+      "localizations" : {
+        "ko-KR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "당신의 커뮤니케이션 스타일을 발견해보세요!"
+          }
+        }
+      }
+    },
+    "Dive in" : {
+
+    },
+    "End Game" : {
+
+    },
+    "Fact Unleashed 🤯" : {
+
+    },
+    "Get ready to reveal the power of facts withyour college crew. Debunk myths and ignite engaging discussion that'll leave your friends" : {
+
+    },
+    "Go back to Homepage?" : {
+
+    },
+    "Homepage" : {
+
+    },
+    "Join forces with a Vibrant Peacock for a problem-solving extravaganza that's part genious, part goofball. Wise Night Owl brings the brainpower, and you add a splash of creativity to find solution" : {
+
+    },
+    "Join your collage friends for a data dive party! Team up to tackle datasets and static, uncovering data-driven conclusion that'll make you the life of the analytical party." : {
+
+    },
+    "Learn more about your persona" : {
+
+    },
+    "Mind-Bender Challenges 🧘🏻‍♀️" : {
+
+    },
+    "Most Compatible With..." : {
+
+    },
+    "Never have i ever" : {
+
+    },
+    "Never have I ever struck up a friendly conversation with a stranger to learn more about their culture and traditions." : {
+
+    },
+    "Next Prompt" : {
+
+    },
+    "No questions available." : {
+
+    },
+    "OK" : {
+
+    },
+    "or Shuffle for random categories!" : {
+
+    },
+    "Organize friendly debates on intriguing topics with your college buddies. Bring well-researched arguments to the table, fostering in-depth, thought-provoking conversations that even the great thinkers would appreciate." : {
+
+    },
+    "Persona profile" : {
+
+    },
+    "Play!" : {
+
+    },
+    "Please select at least two categories or shuffle." : {
+
+    },
+    "Problem-Solving Extravaganza🦉" : {
+
+    },
+    "Question %lld/7" : {
+
+    },
+    "Relax, enjoy and have fun " : {
+
+    },
+    "Select 2 or more categories," : {
+
+    },
+    "Select 2 or more categories, take turns saying 'Never Have I Ever' statements, and watch stories unfold!" : {
+
+    },
+    "Selection Error" : {
+
+    },
+    "Shuffle!" : {
+
+    },
+    "Skip" : {
+
+    },
+    "Skip for now" : {
+
+    },
+    "Start a mini book club with your friends.Choose books on intriguing subjects or genres read them together, and have in-depth discussion. Dive into the world of literature and enjoy intellectual conversations" : {
+
+    },
+    "Start Game" : {
+
+    },
+    "Start playing" : {
+
+    },
+    "Take Quiz" : {
+
+    },
+    "Tap to begin" : {
+
+    },
+    "Tap to begin..." : {
+
+    },
+    "Uni-On" : {
+
+    },
+    "Uni-on!" : {
+
+    },
+    "Vibrant Peackock🦚" : {
+
+    },
+    "View Profile" : {
+
+    },
+    "We are analysing your answers..." : {
+
+    },
+    "We have something special for you to spice things up! Tap on the information button to see what activities we have for you. This will help you get to know the people around you." : {
+
+    },
+    "Welcome👋🏻" : {
+
+    },
+    "What is your spirit animal?🦄" : {
+
+    },
+    "Wise Night Owl" : {
+
+    },
+    "X" : {
+
+    },
+    "You are a ..." : {
+
+    },
+    "Your Special Activity" : {
+
+    }
+  },
+  "version" : "1.0"
+}

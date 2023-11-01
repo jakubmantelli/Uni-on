@@ -11,7 +11,16 @@ import SwiftUI
 struct Uni_onApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            EntryAnimation()
         }
     }
 }
+
+//@main
+//struct Uni_onApp: App {
+//    var body: some Scene {
+//        WindowGroup {
+//            NHIEPersonaView(selectedCategories: Set(["Hobbies & Interests", "Movies & TV Shows"]))
+//        }
+//    }
+//}

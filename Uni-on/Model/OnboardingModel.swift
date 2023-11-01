@@ -20,7 +20,7 @@ struct Page: Identifiable, Equatable {
     static var samplePages:[Page] = [
     Page(title: "Become closer with your new friends", description: "Use our carefully curated game prompts to get to know each other better.", imageUrl: "onboarding1", tag: 0),
     Page(title: "Take our one minute survey to get assigned a persona", description: "Get matched with your most compatible persona to form real, life lasting connections", imageUrl: "onboarding2", tag: 1),
-    Page(title: "What are you waiting for? Lets get started!", description: "", imageUrl: "onboarding3", tag: 2)
+    Page(title: "What are you waiting for? \n Lets get started!", description: "", imageUrl: "onboarding3", tag: 2)
     ]
     
 }

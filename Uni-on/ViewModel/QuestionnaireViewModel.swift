@@ -37,6 +37,10 @@ class QuestionnaireViewModel: ObservableObject {
         }
     }
     
+    func calculateUserScore() -> Int {
+        return userAnswers.reduce(0, +)
+    }
+
     func assignPersona() {
         let totalScore = calculateUserScore()
         assignedPersona = OnboardingQuestionnaire.persona(forScore: totalScore)
@@ -44,19 +48,15 @@ class QuestionnaireViewModel: ObservableObject {
 
     func moveToResultLoading() {
         shouldNavigateToResultLoading = true
-    }
+    } 
 
     func userSelectedAnswer(at index: Int) {
         userAnswers.append(currentQuestion?.questionAnswersPoints[index] ?? 0)
     }
-    
-    func calculateUserScore() -> Int {
-        return userAnswers.reduce(0, +)
-    }
-    
-    func goToZero() {
-        currentQuestionIndex = 0
         
-    }
+//    func goToZero() {
+//        currentQuestionIndex = 0
+//        
+//    }
 
 }

@@ -14,10 +14,11 @@ struct HomeView: View {
                 Color(ColorPallete.primaryLight).ignoresSafeArea()
                 
                 VStack {
-                    Text("Uni-on!")
-                        .offset(y:5)
-                        .font(.title2)
-                        .foregroundColor(.gray)
+//                    Text("Uni-on!")
+//                        .offset(y:5)
+//                        .font(.title2)
+//                        .foregroundColor(.gray)
+                    Spacer()
                     RoundedRectangle(cornerRadius: 10)
                         .foregroundColor(ColorPallete.primary)
                         .frame(width:361, height: 190)
@@ -33,7 +34,7 @@ struct HomeView: View {
                                                 .offset(y:10)
                                             
                                             
-                                            Text("Compassionate \nDolphin")
+                                            Text("Wise Night Owl")
                                             .font(.title2)
                                                 .bold()
                                                 .foregroundColor(.white)

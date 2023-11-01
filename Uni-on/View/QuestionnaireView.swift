@@ -110,28 +110,34 @@ import SwiftUI
 
 struct QuestionnaireView: View {
     @ObservedObject var viewModel: QuestionnaireViewModel
-    
+    @State private var selectedTabIndex = 0 // New state variable for manual page selection
+
     var body: some View {
         NavigationView {
             ZStack {
-                Color(.gray.opacity(0.2))
+                Color(.gray.opacity(0.25))
                     .ignoresSafeArea()
-                TabView(selection: $viewModel.currentQuestionIndex) {
-                    ForEach(0..<viewModel.questions.count, id: \.self) { index in
-                        QuestionView(viewModel: viewModel, questionIndex: index)
-                            .tag(index)
+                VStack {
+                    TabView(selection: $viewModel.currentQuestionIndex) {
+                        ForEach(0..<viewModel.questions.count, id: \.self) { index in
+                            QuestionView(viewModel: viewModel, questionIndex: index)
+                                .tag(index)
+                        }
                     }
+                    .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
                 }
-                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
                 
-                Spacer()
+                //Spacer()
                 // Custom page indicator view
                 //            PageIndicator(currentPage: $viewModel.currentQuestionIndex, totalPages: viewModel.questions.count)
             }
+        //Spacer()
             .navigationBarItems(trailing: NavigationLink("", destination: ResultLoading(), isActive: $viewModel.shouldNavigateToResultLoading))
 
             
-        }            
+        }     
+        .navigationBarBackButtonHidden(true)
+
 
         
         
@@ -145,16 +151,16 @@ struct QuestionnaireView: View {
 
 
 // Create a preview-specific view model for testing purposes
-//class QuestionnaireViewModelPreview: QuestionnaireViewModel {
-//    override init(questions: [OnboardingQuestionnaire]) {
-//        super.init(questions: questions)
-//        // Initialize with some test data if needed
-//    }
-//}
-//
-//struct QuestionnaireView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        let previewViewModel = QuestionnaireViewModelPreview(questions: onboardingQuestions)
-//        return QuestionnaireView(viewModel: previewViewModel)
-//    }
-//}
+class QuestionnaireViewModelPreview: QuestionnaireViewModel {
+    override init(questions: [OnboardingQuestionnaire]) {
+        super.init(questions: questions)
+        // Initialize with some test data if needed
+    }
+}
+
+struct QuestionnaireView_Previews: PreviewProvider {
+    static var previews: some View {
+        let previewViewModel = QuestionnaireViewModelPreview(questions: onboardingQuestions)
+        return QuestionnaireView(viewModel: previewViewModel)
+    }
+}

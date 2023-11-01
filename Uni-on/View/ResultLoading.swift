@@ -41,10 +41,10 @@ struct ResultLoading: View {
                     .padding(.top, 200)
                 Spacer()
                 
-                NavigationLink(destination: OnboardingContent(), isActive: $navigateToNext, label: {
+                NavigationLink(destination: PersonaView(), isActive: $navigateToNext, label: {
                     EmptyView() //needs to be connected to survey result page ⛔️, would be nice to make it dissolve, not slide in
                 }).onAppear{
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
                         self.navigateToNext = true
                     }
                     
@@ -56,6 +56,7 @@ struct ResultLoading: View {
             
             
         }
+        .navigationBarBackButtonHidden(true)
         
         
     }
